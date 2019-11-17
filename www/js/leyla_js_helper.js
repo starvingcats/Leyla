@@ -1,5 +1,5 @@
 var GRAVITY = 1;
-var JUMP = 15;
+var JUMP = 12;
 
 function apply_gravity() {
     gamechar_sp.velocity.y += GRAVITY;

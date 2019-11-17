@@ -5,6 +5,14 @@ var gamechar_img;
 
 var ground_sp;
 
+var poster_img;
+var poster_sp;
+
+var spot_img;
+var spot_1_sp;
+var spot_2_sp;
+
+
 function setup() {
     createCanvas(640, 480);
 
@@ -17,7 +25,19 @@ function setup() {
 
     ground_sp = createSprite(0, 470, 1280, 10);
 
+    poster_sp = createSprite(450, 380);
+    poster_img = loadImage('img/plakat_small.png');
+    poster_sp.addImage(poster_img);
+
+    spot_img = loadImage('img/plakatstrahler_small.png')
+    spot_1_sp = createSprite(420, 350);
+    spot_1_sp.addImage(spot_img);
+
+    spot_2_sp = createSprite(500, 350);
+    spot_2_sp.addImage(spot_img);
+
 }
+
 function draw() {
     background(background_img);
     apply_gravity();
