@@ -7,6 +7,11 @@ var lamp_sp;
 var lamp_off_img;
 var lamp_on_img;
 
+var ground_sp;
+
+var GRAVITY = 1;
+var JUMP = 15;
+
 function setup() {
     createCanvas(640, 480);
 
@@ -23,6 +28,7 @@ function setup() {
     lamp_sp.addImage('on', lamp_on_img);
     lamp_sp.addImage('off', lamp_off_img);
 
+    ground_sp = createSprite(0, 470, 1280, 10);
     //gamechar_sp.addAnimation('normal', 'img/char.png');
 
 }
@@ -30,7 +36,15 @@ function draw() {
     background(background_img);
 
     //gamechar_sp.velocity.x = 0;
-    //gamechar_sp.velocity.y = 0;
+    gamechar_sp.velocity.y += GRAVITY;
+
+    if (gamechar_sp.overlap(ground_sp)) {
+        gamechar_sp.velocity.y = 0;
+    }
+
+    if (keyWentDown('space')) {
+        gamechar_sp.velocity.y = -JUMP;
+    }
 
     if (keyWentDown('a') || mouseWentDown(RIGHT)) {
         gamechar_sp.velocity.x = -5;
