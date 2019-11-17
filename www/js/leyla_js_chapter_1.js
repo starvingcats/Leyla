@@ -10,6 +10,7 @@ var lamp_on_img;
 var lamp_off_check = false;
 
 var ground_sp;
+var platforms = [];
 
 function setup() {
     createCanvas(640, 480);
@@ -28,7 +29,7 @@ function setup() {
     lamp_sp.addImage('off', lamp_off_img);
 
     ground_sp = createSprite(0, 470, 1280, 10);
-    //gamechar_sp.addAnimation('normal', 'img/char.png');
+    platforms.push(ground_sp);
 
 }
 function draw() {

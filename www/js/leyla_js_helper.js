@@ -1,14 +1,18 @@
 var GRAVITY = 1;
-var JUMP = 12;
+var JUMP = 11;
 
 function apply_gravity() {
     gamechar_sp.velocity.y += GRAVITY;
 
-    if (gamechar_sp.overlap(ground_sp)) {
-        gamechar_sp.velocity.y = 0;
-        gamechar_sp.onground = true;
-    } else {
-        gamechar_sp.onground = false;
+    gamechar_sp.onground = false;
+
+    for (var i = 0; i < platforms.length; i++) {
+        var platform = platforms[i];
+
+        if ((gamechar_sp.overlap(platform)) && gamechar_sp.velocity.y > 0) {
+            gamechar_sp.velocity.y = 0;
+            gamechar_sp.onground = true;
+        }
     }
 }
 

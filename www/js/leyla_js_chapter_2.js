@@ -12,6 +12,11 @@ var spot_img;
 var spot_1_sp;
 var spot_2_sp;
 
+var platform_1_sp;
+var platform_2_sp;
+var platform_3_sp;
+var platforms = [];
+
 
 function setup() {
     createCanvas(640, 480);
@@ -24,6 +29,13 @@ function setup() {
     gamechar_sp.addImage(gamechar_img);
 
     ground_sp = createSprite(0, 470, 1280, 10);
+    platform_1_sp = createSprite(365, 410, 25, 5);
+    platform_2_sp = createSprite(365, 350, 25, 5);
+    platform_3_sp = createSprite(450, 300, 200, 5);
+    platforms.push(ground_sp);
+    platforms.push(platform_1_sp);
+    platforms.push(platform_2_sp);
+    platforms.push(platform_3_sp);
 
     poster_sp = createSprite(450, 380);
     poster_img = loadImage('img/plakat_small.png');
