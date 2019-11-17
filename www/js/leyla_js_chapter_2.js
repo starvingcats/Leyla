@@ -7,6 +7,8 @@ var lamp_sp;
 var lamp_off_img;
 var lamp_on_img;
 
+var lamp_off_check = false;
+
 var ground_sp;
 
 var GRAVITY = 1;
@@ -15,7 +17,7 @@ var JUMP = 15;
 function setup() {
     createCanvas(640, 480);
 
-    background_img = loadImage('img/background_full.png');
+    background_img = loadImage('img/bg_lvl2.png');
     background_img.resize(640, 480);
 
     gamechar_sp = createSprite(50,440);
@@ -64,10 +66,16 @@ function draw() {
         gamechar_sp.overlap(lamp_sp, function() {
             if (lamp_sp.getAnimationLabel() == 'on') {
                 lamp_sp.changeImage('off');
+                lamp_off_check = true;
             } else {
                 lamp_sp.changeImage('on');
+                lamp_off_check = false;
             }
         });
+    }
+
+    if ((lamp_off_check) && (gamechar_sp.position.x > 640)) {
+        document.location.href = 'index.html';
     }
 
     drawSprites();
