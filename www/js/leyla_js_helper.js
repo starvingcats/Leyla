@@ -1,18 +1,22 @@
 var GRAVITY = 1;
 var JUMP = 15;
 
-
 function apply_gravity() {
     gamechar_sp.velocity.y += GRAVITY;
 
     if (gamechar_sp.overlap(ground_sp)) {
         gamechar_sp.velocity.y = 0;
+        gamechar_sp.onground = true;
+    } else {
+        gamechar_sp.onground = false;
     }
 }
 
 function basic_movement() {
     if (keyWentDown('space')) {
-        gamechar_sp.velocity.y = -JUMP;
+        if (gamechar_sp.onground) {
+            gamechar_sp.velocity.y = -JUMP;
+        }
     }
     if (keyWentDown('a') || mouseWentDown(RIGHT)) {
         gamechar_sp.velocity.x = -5;
