@@ -3,12 +3,6 @@ var background_img;
 var gamechar_sp;
 var gamechar_img;
 
-var lamp_sp;
-var lamp_off_img;
-var lamp_on_img;
-
-var lamp_off_check = false;
-
 var ground_sp;
 
 var GRAVITY = 1;
@@ -24,14 +18,7 @@ function setup() {
     gamechar_img = loadImage('img/char_small.png');
     gamechar_sp.addImage(gamechar_img);
 
-    lamp_sp = createSprite(450, 400);
-    lamp_on_img = loadImage('img/lampe_small.png');
-    lamp_off_img = loadImage('img/lampe_off_small.png');
-    lamp_sp.addImage('on', lamp_on_img);
-    lamp_sp.addImage('off', lamp_off_img);
-
     ground_sp = createSprite(0, 470, 1280, 10);
-    //gamechar_sp.addAnimation('normal', 'img/char.png');
 
 }
 function draw() {
@@ -63,20 +50,12 @@ function draw() {
     }
 
     if (keyWentDown('f')) {
-        gamechar_sp.overlap(lamp_sp, function() {
-            if (lamp_sp.getAnimationLabel() == 'on') {
-                lamp_sp.changeImage('off');
-                lamp_off_check = true;
-            } else {
-                lamp_sp.changeImage('on');
-                lamp_off_check = false;
-            }
-        });
     }
 
-    if ((lamp_off_check) && (gamechar_sp.position.x > 640)) {
+    if ((false) && (gamechar_sp.position.x > 620)) {
         document.location.href = 'index.html';
     }
 
+    check_scene_bounds();
     drawSprites();
 }

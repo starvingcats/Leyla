@@ -74,9 +74,10 @@ function draw() {
         });
     }
 
-    if ((lamp_off_check) && (gamechar_sp.position.x > 640)) {
+    if ((lamp_off_check) && (gamechar_sp.position.x > 620)) {
         document.location.href = 'chapter2.html';
     }
 
+    check_scene_bounds();
     drawSprites();
 }
