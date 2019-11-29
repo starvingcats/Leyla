@@ -8,7 +8,7 @@ function apply_gravity() {
 
     for (var i = 0; i < platforms.length; i++) {
         var platform = platforms[i];
-
+        platform.visible = false;
         if ((gamechar_sp.overlap(platform)) && gamechar_sp.velocity.y > 0) {
             gamechar_sp.velocity.y = 0;
             gamechar_sp.onground = true;

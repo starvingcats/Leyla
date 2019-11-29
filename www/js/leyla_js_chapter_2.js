@@ -11,12 +11,17 @@ var poster_sp;
 var spot_img;
 var spot_1_sp;
 var spot_2_sp;
+var spot_1_up;
+var spot_2_up;
+var spot_places = [];
 
 var platform_1_sp;
 var platform_2_sp;
 var platform_3_sp;
 var platforms = [];
 
+var pickables = [];
+var picked;
 
 function setup() {
     createCanvas(640, 480);
@@ -43,10 +48,18 @@ function setup() {
 
     spot_img = loadImage('img/plakatstrahler_small.png')
     spot_1_sp = createSprite(420, 350);
+    spot_1_up = createSprite(420, 290, 20 , 20);
     spot_1_sp.addImage(spot_img);
+    pickables.push(spot_1_sp);
+    spot_places.push(spot_1_up);
+    spot_1_up.visible = false;
 
     spot_2_sp = createSprite(500, 350);
+    spot_2_up = createSprite(500, 290, 20 , 20);
     spot_2_sp.addImage(spot_img);
+    pickables.push(spot_2_sp);
+    spot_places.push(spot_2_up);
+    spot_2_up.visible = false;
 
 }
 
@@ -57,9 +70,30 @@ function draw() {
 
 
     if (keyWentDown('f')) {
+      if ( !picked ) {
+        for (var i = 0; i < pickables.length; i++) {
+          var pickable = pickables[i];
+          if ( (gamechar_sp.overlap(pickable)) && (pickable.mirrorY() != -1) ) {
+            picked = pickable;
+            picked.visible = false;
+          }
+        }
+      } else {
+        for (var i = 0; i < spot_places.length; i++) {
+          var spot_place = spot_places[i];
+          if (gamechar_sp.overlap(spot_place)) {
+            picked.visible = true;
+            picked.mirrorY(-1);
+            picked.position.y = picked.position.y + 10;
+            picked = null;
+          }
+        }
+      }
     }
 
-    if ((false) && (gamechar_sp.position.x > 620)) {
+    if ( (spot_1_sp.mirrorY() == -1) &&
+         (spot_2_sp.mirrorY() == -1) &&
+         (gamechar_sp.position.x > 620) ) {
         document.location.href = 'index.html';
     }
 
