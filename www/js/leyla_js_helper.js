@@ -22,17 +22,17 @@ function basic_movement() {
             gamechar_sp.velocity.y = -JUMP;
         }
     }
-    if (keyWentDown('a') || mouseWentDown(RIGHT)) {
+    if (keyWentDown('a')) {
         gamechar_sp.velocity.x = -5;
     }
-    if (keyWentUp('a') || mouseWentUp(RIGHT)) {
+    if (keyWentUp('a')) {
         gamechar_sp.velocity.x = 0;
     }
 
-    if (keyWentDown('d') || mouseWentDown(LEFT)) {
+    if (keyWentDown('d')) {
         gamechar_sp.velocity.x = 5;
     }
-    if (keyWentUp('d') || mouseWentUp(LEFT)) {
+    if (keyWentUp('d')) {
         gamechar_sp.velocity.x = 0;
     }
 }

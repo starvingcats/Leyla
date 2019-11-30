@@ -1,4 +1,6 @@
 var background_img;
+var city_img;
+var city_sp;
 
 var gamechar_sp;
 var gamechar_img;
@@ -12,11 +14,19 @@ var lamp_off_check = false;
 var ground_sp;
 var platforms = [];
 
-function setup() {
-    createCanvas(640, 480);
+var SCENE_W = 1280;
+var SCENE_H = 960;
 
-    background_img = loadImage('img/background_full.png');
-    background_img.resize(640, 480);
+function setup() {
+    createCanvas(SCENE_W / 2, SCENE_H / 2);
+
+    background_img = loadImage('img/background.png');
+    //background_img.resize(SCENE_W / 2, SCENE_H / 2);
+    background_img.resize(SCENE_W, SCENE_H);
+
+    city_img = loadImage('img/city_small.png');
+    city_sp = createSprite(0, 400);
+    city_sp.addImage(city_img);
 
     gamechar_sp = createSprite(50,440);
     gamechar_img = loadImage('img/char_small.png');
@@ -33,10 +43,20 @@ function setup() {
 
 }
 function draw() {
-    background(background_img);
+  background(background_img);
+  camera.zoom = 1;
+
     apply_gravity();
     basic_movement();
 
+    camera.position.x = gamechar_sp.position.x;
+    camera.position.y = gamechar_sp.position.y - 200;
+    /*
+    if(mouseIsPressed)
+      camera.zoom = 0.5;
+    else
+      camera.zoom = 1;
+    */
     if (keyWentDown('f')) {
         gamechar_sp.overlap(lamp_sp, function() {
             if (lamp_sp.getAnimationLabel() == 'on') {
@@ -55,4 +75,7 @@ function draw() {
 
     check_scene_bounds();
     drawSprites();
+    camera.off();
+    //image(background_img, 0 ,0);
+
 }
