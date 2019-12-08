@@ -29,7 +29,7 @@ function setup() {
     city_sp.addImage(city_img);
 
     gamechar_sp = createSprite(50,440);
-    gamechar_img = loadImage('img/char_small.png');
+    gamechar_img = loadImage('img/car_small.png');
     gamechar_sp.addImage(gamechar_img);
 
     lamp_sp = createSprite(450, 400);
