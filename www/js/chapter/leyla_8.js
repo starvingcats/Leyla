@@ -5,11 +5,14 @@ var city_sp;
 var gamechar_sp;
 var gamechar_img;
 
-var lamp_sp;
-var lamp_off_img;
-var lamp_on_img;
+var house_sp;
+var house_off_img;
+var house_on_img;
 
-var lamp_off_check = false;
+var house_off_check = false;
+
+var dude_sp;
+var dude_img;
 
 var ground_sp;
 var platforms = [];
@@ -30,50 +33,38 @@ function setup() {
 
     create_gamechar();
 
-    lamp_sp = createSprite(450, 400);
-    lamp_on_img = loadImage('img/lampe_small.png');
-    lamp_off_img = loadImage('img/lampe_off_small.png');
-    lamp_sp.addImage('on', lamp_on_img);
-    lamp_sp.addImage('off', lamp_off_img);
+    house_sp = createSprite(450, 350);
+    house_on_img = loadImage('img/aggrohouse_small_on.png');
+    house_off_img = loadImage('img/aggrohouse_small_off.png');
+    house_sp.addImage('on', house_on_img);
+    house_sp.addImage('off', house_off_img);
 
     ground_sp = createSprite(0, 470, 1280, 10);
     platforms.push(ground_sp);
 
 }
 function draw() {
-  background(background_img);
-  camera.zoom = 1;
+    background(background_img);
 
     apply_gravity();
     basic_movement();
 
-    camera.position.x = gamechar_sp.position.x;
-    camera.position.y = gamechar_sp.position.y - 200;
-    /*
-    if(mouseIsPressed)
-      camera.zoom = 0.5;
-    else
-      camera.zoom = 1;
-    */
     if (keyWentDown('f')) {
-        gamechar_sp.overlap(lamp_sp, function() {
-            if (lamp_sp.getAnimationLabel() == 'on') {
-                lamp_sp.changeImage('off');
-                lamp_off_check = true;
+        gamechar_sp.overlap(house_sp, function() {
+            if (house_sp.getAnimationLabel() == 'on') {
+                house_sp.changeImage('off');
+                house_off_check = true;
             } else {
-                lamp_sp.changeImage('on');
-                lamp_off_check = false;
+                house_sp.changeImage('on');
+                house_off_check = false;
             }
         });
     }
 
-    if ((lamp_off_check) && (gamechar_sp.position.x > 620)) {
+    if ((house_off_check) && (gamechar_sp.position.x > 620)) {
         document.location.href = 'index.html';
     }
 
     check_scene_bounds();
     drawSprites();
-    camera.off();
-    //image(background_img, 0 ,0);
-
 }

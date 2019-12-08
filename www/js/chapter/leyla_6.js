@@ -11,6 +11,9 @@ var lamp_on_img;
 
 var lamp_off_check = false;
 
+var monument_sp;
+var monument_img;
+
 var ground_sp;
 var platforms = [];
 
@@ -30,38 +33,36 @@ function setup() {
 
     create_gamechar();
 
-    lamp_sp = createSprite(450, 400);
-    lamp_on_img = loadImage('img/lampe_small.png');
-    lamp_off_img = loadImage('img/lampe_off_small.png');
+    monument_img = loadImage('img/monument_small.png');
+    monument_sp = createSprite(450, 400);
+    monument_sp.addImage(monument_img);
+
+    lamp_sp = createSprite(400, 370);
+    lamp_on_img = loadImage('img/pivotlamp_small.png');
+    //lamp_off_img = loadImage('img/lampe_off_small.png');
     lamp_sp.addImage('on', lamp_on_img);
-    lamp_sp.addImage('off', lamp_off_img);
+    //lamp_sp.addImage('off', lamp_off_img);
 
     ground_sp = createSprite(0, 470, 1280, 10);
     platforms.push(ground_sp);
 
 }
 function draw() {
-  background(background_img);
-  camera.zoom = 1;
+    background(background_img);
 
     apply_gravity();
     basic_movement();
 
-    camera.position.x = gamechar_sp.position.x;
-    camera.position.y = gamechar_sp.position.y - 200;
-    /*
-    if(mouseIsPressed)
-      camera.zoom = 0.5;
-    else
-      camera.zoom = 1;
-    */
     if (keyWentDown('f')) {
         gamechar_sp.overlap(lamp_sp, function() {
-            if (lamp_sp.getAnimationLabel() == 'on') {
-                lamp_sp.changeImage('off');
+            if (!lamp_off_check) {
+                lamp_sp.rotation = 20;
+                lamp_sp.position.y += 20;
                 lamp_off_check = true;
             } else {
-                lamp_sp.changeImage('on');
+                //lamp_sp.changeImage('on');
+                lamp_sp.rotation = 0;
+                lamp_sp.position.y -= 20;
                 lamp_off_check = false;
             }
         });
@@ -73,7 +74,4 @@ function draw() {
 
     check_scene_bounds();
     drawSprites();
-    camera.off();
-    //image(background_img, 0 ,0);
-
 }

@@ -11,6 +11,8 @@ var lamp_on_img;
 
 var lamp_off_check = false;
 
+var moths_sp;
+
 var ground_sp;
 var platforms = [];
 
@@ -36,6 +38,9 @@ function setup() {
     lamp_sp.addImage('on', lamp_on_img);
     lamp_sp.addImage('off', lamp_off_img);
 
+    moths_sp = createSprite(450, 400);
+    moths_sp.addAnimation('swarming', 'img/moth1_small.png', 'img/moth2_small.png')
+
     ground_sp = createSprite(0, 470, 1280, 10);
     platforms.push(ground_sp);
 
@@ -60,6 +65,7 @@ function draw() {
             if (lamp_sp.getAnimationLabel() == 'on') {
                 lamp_sp.changeImage('off');
                 lamp_off_check = true;
+                moths_sp.velocity.y = -5;
             } else {
                 lamp_sp.changeImage('on');
                 lamp_off_check = false;
