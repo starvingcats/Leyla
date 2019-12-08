@@ -35,6 +35,7 @@ function basic_movement() {
     if (keyWentUp('d')) {
         gamechar_sp.velocity.x = 0;
     }
+
 }
 
 function check_scene_bounds() {
@@ -47,4 +48,17 @@ function check_scene_bounds() {
             gamechar_sp.velocity.x = 0;
         }
     }
+
+    if (gamechar_sp.velocity.x == 0) {
+        gamechar_sp.changeAnimation('standing');
+    } else {
+        gamechar_sp.changeAnimation('walking');
+    }
+
+}
+
+function create_gamechar() {
+    gamechar_sp = createSprite(50,440);
+    gamechar_sp.addAnimation('walking', 'img/leylawalk1_small.png', 'img/leylawalk2_small.png');
+    gamechar_sp.addAnimation('standing', 'img/leylawalk1_small.png');
 }

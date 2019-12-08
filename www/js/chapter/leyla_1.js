@@ -16,13 +16,11 @@ var SCENE_H = 960;
 function setup() {
     createCanvas(SCENE_W / 2, SCENE_H / 2);
 
+    create_gamechar();
+
     background_img = loadImage('img/bg_intro.png');
     //background_img.resize(SCENE_W / 2, SCENE_H / 2);
     background_img.resize(SCENE_W, SCENE_H);
-
-    gamechar_sp = createSprite(50,440);
-    gamechar_img = loadImage('img/char_small.png');
-    gamechar_sp.addImage(gamechar_img);
 
     telescope_sp = createSprite(450, 400);
     telescope_img = loadImage('img/telescope_small.png');

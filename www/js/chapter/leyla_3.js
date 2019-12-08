@@ -28,9 +28,7 @@ function setup() {
     city_sp = createSprite(0, 400);
     city_sp.addImage(city_img);
 
-    gamechar_sp = createSprite(50,440);
-    gamechar_img = loadImage('img/char_small.png');
-    gamechar_sp.addImage(gamechar_img);
+    create_gamechar();
 
     house_sp = createSprite(450, 400);
     house_on_img = loadImage('img/house_small.png');

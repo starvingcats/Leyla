@@ -29,9 +29,7 @@ function setup() {
     background_img = loadImage('img/bg_lvl2.png');
     background_img.resize(640, 480);
 
-    gamechar_sp = createSprite(50,440);
-    gamechar_img = loadImage('img/char_small.png');
-    gamechar_sp.addImage(gamechar_img);
+    create_gamechar();
 
     ground_sp = createSprite(0, 470, 1280, 10);
     platform_1_sp = createSprite(365, 410, 25, 5);

@@ -28,9 +28,7 @@ function setup() {
     city_sp = createSprite(0, 400);
     city_sp.addImage(city_img);
 
-    gamechar_sp = createSprite(50,440);
-    gamechar_img = loadImage('img/char_small.png');
-    gamechar_sp.addImage(gamechar_img);
+    create_gamechar();
 
     lamp_sp = createSprite(450, 400);
     lamp_on_img = loadImage('img/lampe_small.png');
