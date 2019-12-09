@@ -17,7 +17,79 @@
       },
       {
         "role": "leyla",
-        "text": "Halt die Fresse ja!"
+        "text": "Jaja, is ja gut!"
+      }
+    ]
+  },
+  "chapter2": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Jetzt ziehen wir in die Stadt..."
+      },
+      {
+        "role": "leyla",
+        "text": "Ich sehe ja gar keine Sterne!"
+      }
+    ]
+  },
+  "chapter3": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Mal sehen, wie der Nachthimmel hier aussieht..."
+      }
+    ],
+    "midclue": [
+      {
+        "role": "leyla",
+        "text": "Ich muss zuerst das Licht in meinem Zimmer ausmachen."
+      }
+    ],
+    "outro": [
+      {
+        "role": "leyla",
+        "text": "Ich kann kaum etwas erkennen. Ich muss etwas unternehmen!"
+      }
+    ]
+  },
+  "chapter4": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Die Motten sind gefangen. Hier ist eine Zeitschaltuhr nützlich!"
+      }
+    ]
+  },
+  "chapter5": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Die Lampen dürfen nicht in den Himmel strahlen"
+      }
+    ]
+  },
+  "chapter6": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Dieser Strahler ist falsch ausgerichtet"
+      }
+    ]
+  },
+  "chapter7": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Die Laterne leuchtet zu sehr in das Gebüsch"
+      }
+    ]
+  },
+  "chapter8": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Dieses Licht ist viel zu blau!"
       }
     ]
   }

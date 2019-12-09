@@ -2,20 +2,19 @@ var background_img;
 var city_img;
 var city_sp;
 
-var gamechar_sp;
-var gamechar_img;
-
-var ground_sp;
-var platforms = [];
-
 var SCENE_W = 1280;
 var SCENE_H = 960;
 
 function setup() {
+
+    dialogues = dialogues_raw.chapter2;
+
     createCanvas(SCENE_W / 2, SCENE_H / 2);
 
+    create_ground();
+    create_textbox();
+
     background_img = loadImage('img/background.png');
-    //background_img.resize(SCENE_W / 2, SCENE_H / 2);
     background_img.resize(SCENE_W, SCENE_H);
 
     city_img = loadImage('img/city_small.png');
@@ -25,9 +24,6 @@ function setup() {
     gamechar_sp = createSprite(50,440);
     gamechar_img = loadImage('img/car_small.png');
     gamechar_sp.addImage(gamechar_img);
-
-    ground_sp = createSprite(0, 470, 1280, 10);
-    platforms.push(ground_sp);
 
 }
 
@@ -47,6 +43,7 @@ function draw() {
       camera.zoom = 1;
     */
     if (keyWentDown('f')) {
+        cur_dialogue_step += 1;
     }
 
     if ((true) && (gamechar_sp.position.x > 620)) {
@@ -55,9 +52,7 @@ function draw() {
 
     check_scene_bounds();
     drawSprites();
+    run_dialogue();
     camera.off();
-
-    fill("white");
-    text('Jetzt ziehen wir in die Stadt...', 320, 240);
 
 }

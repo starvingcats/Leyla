@@ -2,9 +2,6 @@ var background_img;
 var city_img;
 var city_sp;
 
-var gamechar_sp;
-var gamechar_img;
-
 var house_sp;
 var house_on_img;
 var house_off_img;
@@ -18,17 +15,16 @@ var telescope_seen = false;
 
 var telescope_stars_img;
 
-var ground_sp;
-var platforms = [];
-
 var SCENE_W = 1280;
 var SCENE_H = 960;
 
 function setup() {
+
+    dialogues = dialogues_raw.chapter3;
+
     createCanvas(SCENE_W / 2, SCENE_H / 2);
 
     background_img = loadImage('img/background.png');
-    //background_img.resize(SCENE_W / 2, SCENE_H / 2);
     background_img.resize(SCENE_W, SCENE_H);
 
     telescope_stars_img = loadImage('img/citysky_splash.png');
@@ -38,6 +34,8 @@ function setup() {
     city_sp.addImage(city_img);
 
     create_gamechar();
+    create_ground();
+    create_textbox();
 
     house_sp = createSprite(450, 400);
     house_on_img = loadImage('img/house_small.png');
@@ -48,9 +46,6 @@ function setup() {
     telescope_sp = createSprite(250, 400);
     telescope_img = loadImage('img/telescope_small.png');
     telescope_sp.addImage(telescope_img);
-
-    ground_sp = createSprite(0, 470, 1280, 10);
-    platforms.push(ground_sp);
 
 }
 function draw() {
@@ -81,8 +76,10 @@ function draw() {
 
       gamechar_sp.overlap(telescope_sp, function() {
           telescope_off_check = true;
+          cur_dialogue = 'midclue';
           if (house_off_check) {
               telescope_seen = true;
+              cur_dialogue = 'outro';
           }
       });
 
@@ -99,12 +96,6 @@ function draw() {
 
   check_scene_bounds();
   drawSprites();
+  run_dialogue();
 
-  if (!house_off_check) {
-      fill("white");
-      text('Ich muss erst das Licht in meinem Zimmer ausmachen...', 320, 240);
-  } else if (telescope_seen) {
-      fill("white");
-      text('Das reicht noch nicht. Ich muss mehr Lichter ausmachen...', 320, 240);
-  }
 }

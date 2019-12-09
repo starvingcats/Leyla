@@ -2,9 +2,6 @@ var background_img;
 var city_img;
 var city_sp;
 
-var gamechar_sp;
-var gamechar_img;
-
 var lamp_sp;
 var lamp_off_img;
 var lamp_on_img;
@@ -13,17 +10,16 @@ var lamp_off_check = false;
 
 var moths_sp;
 
-var ground_sp;
-var platforms = [];
-
 var SCENE_W = 1280;
 var SCENE_H = 960;
 
 function setup() {
+
+    dialogues = dialogues_raw.chapter4;
+
     createCanvas(SCENE_W / 2, SCENE_H / 2);
 
     background_img = loadImage('img/background.png');
-    //background_img.resize(SCENE_W / 2, SCENE_H / 2);
     background_img.resize(SCENE_W, SCENE_H);
 
     city_img = loadImage('img/city_small.png');
@@ -31,6 +27,8 @@ function setup() {
     city_sp.addImage(city_img);
 
     create_gamechar();
+    create_ground();
+    create_textbox();
 
     lamp_sp = createSprite(450, 400);
     lamp_on_img = loadImage('img/lampe_small.png');
@@ -41,27 +39,19 @@ function setup() {
     moths_sp = createSprite(450, 400);
     moths_sp.addAnimation('swarming', 'img/moth1_small.png', 'img/moth2_small.png')
 
-    ground_sp = createSprite(0, 470, 1280, 10);
-    platforms.push(ground_sp);
-
 }
 function draw() {
-  background(background_img);
-  camera.zoom = 1;
+    background(background_img);
+    camera.zoom = 1;
 
     apply_gravity();
     basic_movement();
 
     camera.position.x = gamechar_sp.position.x;
     camera.position.y = gamechar_sp.position.y - 200;
-    /*
-    if(mouseIsPressed)
-      camera.zoom = 0.5;
-    else
-      camera.zoom = 1;
-    */
+
     if (keyWentDown('f')) {
-        gamechar_sp.overlap(lamp_sp, function() {
+        if (gamechar_sp.overlap(lamp_sp)) {
             if (lamp_sp.getAnimationLabel() == 'on') {
                 lamp_sp.changeImage('off');
                 lamp_off_check = true;
@@ -70,7 +60,9 @@ function draw() {
                 lamp_sp.changeImage('on');
                 lamp_off_check = false;
             }
-        });
+        } else {
+            cur_dialogue_step += 1;
+        };
     }
 
     if ((lamp_off_check) && (gamechar_sp.position.x > 620)) {
@@ -79,7 +71,6 @@ function draw() {
 
     check_scene_bounds();
     drawSprites();
+    run_dialogue();
     camera.off();
-    //image(background_img, 0 ,0);
-
 }

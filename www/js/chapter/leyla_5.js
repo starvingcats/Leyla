@@ -1,10 +1,5 @@
 var background_img;
 
-var gamechar_sp;
-var gamechar_img;
-
-var ground_sp;
-
 var poster_img;
 var poster_sp;
 
@@ -24,18 +19,21 @@ var pickables = [];
 var picked;
 
 function setup() {
+
+    dialogues = dialogues_raw.chapter5;
+
     createCanvas(640, 480);
 
     background_img = loadImage('img/bg_lvl2.png');
     background_img.resize(640, 480);
 
     create_gamechar();
+    create_ground();
+    create_textbox();
 
-    ground_sp = createSprite(0, 470, 1280, 10);
     platform_1_sp = createSprite(365, 410, 25, 5);
     platform_2_sp = createSprite(365, 350, 25, 5);
     platform_3_sp = createSprite(450, 300, 200, 5);
-    platforms.push(ground_sp);
     platforms.push(platform_1_sp);
     platforms.push(platform_2_sp);
     platforms.push(platform_3_sp);
@@ -62,10 +60,10 @@ function setup() {
 }
 
 function draw() {
+
     background(background_img);
     apply_gravity();
     basic_movement();
-
 
     if (keyWentDown('f')) {
       if ( !picked ) {
@@ -74,7 +72,9 @@ function draw() {
           if ( (gamechar_sp.overlap(pickable)) && (pickable.mirrorY() != -1) ) {
             picked = pickable;
             picked.visible = false;
-          }
+        } else {
+            cur_dialogue_step += 1;
+        }
         }
       } else {
         for (var i = 0; i < spot_places.length; i++) {
@@ -84,7 +84,9 @@ function draw() {
             picked.mirrorY(-1);
             picked.position.y = picked.position.y + 10;
             picked = null;
-          }
+        } else {
+            cur_dialogue_step += 1;
+        }
         }
       }
     }
@@ -97,4 +99,5 @@ function draw() {
 
     check_scene_bounds();
     drawSprites();
+    run_dialogue();
 }
