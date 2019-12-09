@@ -1,0 +1,24 @@
+{
+  "chapter1": {
+    "intro": [
+      {
+        "role": "leyla",
+        "text": "Die Sterne sind aber schön heute Nacht!"
+      },
+      {
+        "role": "leyla",
+        "text": "Ich muss durch das Teleskop schauen!"
+      }
+    ],
+    "outro": [
+      {
+        "role": "mother",
+        "text": "Komm nach Hause!"
+      },
+      {
+        "role": "leyla",
+        "text": "Halt die Fresse ja!"
+      }
+    ]
+  }
+}
