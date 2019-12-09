@@ -43,9 +43,11 @@ function basic_movement() {
     }
     if (keyWentDown('a')) {
         gamechar_sp.velocity.x = -5;
+        gamechar_sp.mirrorX(-1);
     }
     if (keyWentUp('a')) {
         gamechar_sp.velocity.x = 0;
+        gamechar_sp.mirrorX(1);
     }
 
     if (keyWentDown('d')) {
