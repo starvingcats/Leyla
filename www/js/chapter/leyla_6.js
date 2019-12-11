@@ -1,6 +1,4 @@
 var background_img;
-var city_img;
-var city_sp;
 
 var lamp_sp;
 var lamp_on_img;
@@ -10,35 +8,28 @@ var lamp_off_check = false;
 var monument_sp;
 var monument_img;
 
-var SCENE_W = 1280;
-var SCENE_H = 960;
-
 function setup() {
 
     dialogues = dialogues_raw.chapter6;
 
-    createCanvas(SCENE_W / 2, SCENE_H / 2);
+    createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/background.png');
-    background_img.resize(SCENE_W, SCENE_H);
-
-    city_img = loadImage('img/city_small.png');
-    city_sp = createSprite(0, 400);
-    city_sp.addImage(city_img);
+    background_img = loadImage('img/bg_lvl2.png');
 
     create_gamechar();
     create_ground();
     create_textbox();
 
     monument_img = loadImage('img/monument_small.png');
-    monument_sp = createSprite(450, 400);
+    monument_sp = createSprite((3 * SCENE_W / 4), SCENE_H - 150);
     monument_sp.addImage(monument_img);
 
-    lamp_sp = createSprite(400, 370);
+    lamp_sp = createSprite(2 * SCENE_W / 3, SCENE_H - 150);
     lamp_on_img = loadImage('img/pivotlamp_small.png');
     lamp_sp.addImage('on', lamp_on_img);
 
 }
+
 function draw() {
     background(background_img);
 
@@ -49,11 +40,11 @@ function draw() {
         if (gamechar_sp.overlap(lamp_sp)) {
             if (!lamp_off_check) {
                 lamp_sp.rotation = 20;
-                lamp_sp.position.y += 20;
+                lamp_sp.position.y += 60;
                 lamp_off_check = true;
             } else {
                 lamp_sp.rotation = 0;
-                lamp_sp.position.y -= 20;
+                lamp_sp.position.y -= 60;
                 lamp_off_check = false;
             }
         } else {
@@ -61,7 +52,7 @@ function draw() {
         };
     }
 
-    if ((lamp_off_check) && (gamechar_sp.position.x > 620)) {
+    if ((lamp_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
         document.location.href = 'chapter7.html';
     }
 

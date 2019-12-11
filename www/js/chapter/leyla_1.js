@@ -7,14 +7,11 @@ var telescope_seen = false;
 
 var telescope_stars_img;
 
-var SCENE_W = 1280;
-var SCENE_H = 960;
-
 function setup() {
 
     dialogues = dialogues_raw.chapter1;
 
-    createCanvas(SCENE_W / 2, SCENE_H / 2);
+    createCanvas(SCENE_W, SCENE_H);
 
     create_gamechar();
     create_textbox();
@@ -25,11 +22,10 @@ function setup() {
 
     telescope_stars_img = loadImage('img/stars_splash.png');
 
-    telescope_sp = createSprite(450, 400);
+    telescope_sp = createSprite(SCENE_W / 2, SCENE_H - 60);
     telescope_img = loadImage('img/telescope_small.png');
     telescope_sp.addImage(telescope_img);
 }
-
 
 function draw() {
     if (telescope_off_check) {
@@ -63,7 +59,7 @@ function draw() {
     drawSprites();
     run_dialogue();
 
-    if ((telescope_seen) && (gamechar_sp.position.x > 620)) {
+    if ((telescope_seen) && (gamechar_sp.position.x > SCENE_RBOUND)) {
         document.location.href = 'chapter2.html';
     }
 

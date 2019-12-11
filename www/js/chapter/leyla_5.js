@@ -22,36 +22,35 @@ function setup() {
 
     dialogues = dialogues_raw.chapter5;
 
-    createCanvas(640, 480);
+    createCanvas(SCENE_W, SCENE_H);
 
     background_img = loadImage('img/bg_lvl2.png');
-    background_img.resize(640, 480);
 
     create_gamechar();
     create_ground();
     create_textbox();
 
-    platform_1_sp = createSprite(365, 410, 25, 5);
-    platform_2_sp = createSprite(365, 350, 25, 5);
-    platform_3_sp = createSprite(450, 300, 200, 5);
+    platform_1_sp = createSprite((3 * SCENE_W / 4) - 100, SCENE_GROUND - 50, 25, 5);
+    platform_2_sp = createSprite((3 * SCENE_W / 4) - 100, SCENE_GROUND - 100, 25, 5);
+    platform_3_sp = createSprite((3 * SCENE_W / 4) - 15, SCENE_GROUND - 155, 200, 5);
     platforms.push(platform_1_sp);
     platforms.push(platform_2_sp);
     platforms.push(platform_3_sp);
 
-    poster_sp = createSprite(450, 380);
+    poster_sp = createSprite(3 * SCENE_W / 4, SCENE_GROUND - 80);
     poster_img = loadImage('img/plakat_small.png');
     poster_sp.addImage(poster_img);
 
     spot_img = loadImage('img/plakatstrahler_small.png')
-    spot_1_sp = createSprite(420, 350);
-    spot_1_up = createSprite(420, 290, 20 , 20);
+    spot_1_sp = createSprite((3 * SCENE_W / 4) - 50, SCENE_GROUND - 120);
+    spot_1_up = createSprite((3 * SCENE_W / 4) - 50, SCENE_GROUND - 180, 20 , 20);
     spot_1_sp.addImage(spot_img);
     pickables.push(spot_1_sp);
     spot_places.push(spot_1_up);
     spot_1_up.visible = false;
 
-    spot_2_sp = createSprite(500, 350);
-    spot_2_up = createSprite(500, 290, 20 , 20);
+    spot_2_sp = createSprite((3 * SCENE_W / 4) + 50, SCENE_GROUND - 120);
+    spot_2_up = createSprite((3 * SCENE_W / 4) + 50, SCENE_GROUND - 180, 20 , 20);
     spot_2_sp.addImage(spot_img);
     pickables.push(spot_2_sp);
     spot_places.push(spot_2_up);
@@ -93,7 +92,7 @@ function draw() {
 
     if ( (spot_1_sp.mirrorY() == -1) &&
          (spot_2_sp.mirrorY() == -1) &&
-         (gamechar_sp.position.x > 620) ) {
+         (gamechar_sp.position.x > SCENE_RBOUND) ) {
         document.location.href = 'chapter6.html';
     }
 

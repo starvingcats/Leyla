@@ -1,6 +1,4 @@
 var background_img;
-var city_img;
-var city_sp;
 
 var lamp_sp;
 var lamp_on_img;
@@ -11,38 +9,30 @@ var bush_img;
 
 var lamp_off_check = false;
 
-var SCENE_W = 1280;
-var SCENE_H = 960;
-
 function setup() {
 
     dialogues = dialogues_raw.chapter7;
 
-    createCanvas(SCENE_W / 2, SCENE_H / 2);
+    createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/background.png');
-    //background_img.resize(SCENE_W / 2, SCENE_H / 2);
-    background_img.resize(SCENE_W, SCENE_H);
-
-    city_img = loadImage('img/city_small.png');
-    city_sp = createSprite(0, 400);
-    city_sp.addImage(city_img);
+    background_img = loadImage('img/bg_lvl2.png');
 
     create_gamechar();
     create_ground();
     create_textbox();
 
-    lamp_sp = createSprite(350, 400);
+    lamp_sp = createSprite(SCENE_W / 2, SCENE_GROUND - 50);
     lamp_on_img = loadImage('img/bushlamp1_small.png');
     lamp_off_img = loadImage('img/bushlamp2_small.png');
     lamp_sp.addImage('on', lamp_on_img);
     lamp_sp.addImage('off', lamp_off_img);
 
     bush_img = loadImage('img/greenbush_small.png');
-    bush_sp = createSprite(440, 400);
+    bush_sp = createSprite(SCENE_W / 2 + 100, SCENE_GROUND - 50);
     bush_sp.addImage(bush_img);
 
 }
+
 function draw() {
     background(background_img);
 
@@ -67,7 +57,7 @@ function draw() {
         };
     }
 
-    if ((lamp_off_check) && (gamechar_sp.position.x > 620)) {
+    if ((lamp_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
         document.location.href = 'chapter8.html';
     }
 

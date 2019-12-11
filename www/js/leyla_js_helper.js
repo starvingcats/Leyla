@@ -1,6 +1,11 @@
 var GRAVITY = 1;
 var JUMP = 11;
 
+var SCENE_W = 1280;
+var SCENE_H = 720;
+var SCENE_GROUND = SCENE_H - 10;
+var SCENE_RBOUND = SCENE_W - 20;
+
 var cur_dialogue = 'intro';
 var cur_dialogue_step = 0;
 
@@ -60,7 +65,7 @@ function basic_movement() {
 }
 
 function check_scene_bounds() {
-    if (gamechar_sp.position.x > 620) {
+    if (gamechar_sp.position.x > SCENE_RBOUND) {
         if (gamechar_sp.velocity.x > 0) {
             gamechar_sp.velocity.x = 0;
         }
@@ -79,19 +84,19 @@ function check_scene_bounds() {
 }
 
 function create_gamechar() {
-    gamechar_sp = createSprite(50,440);
+    gamechar_sp = createSprite(SCENE_W/15, SCENE_H - 60);
     gamechar_sp.addAnimation('walking', 'img/leylawalk1_small.png', 'img/leylawalk2_small.png');
     gamechar_sp.addAnimation('standing', 'img/leylawalk1_small.png');
 }
 
 function create_textbox() {
     textbox_img = loadImage('img/textbox_small.png');
-    textbox_sp = createSprite(320, 40);
+    textbox_sp = createSprite(SCENE_W/2, SCENE_H / 15);
     textbox_sp.addImage(textbox_img);
 }
 
 function create_ground() {
-    ground_sp = createSprite(0, 470, 1280, 10);
+    ground_sp = createSprite(0, SCENE_GROUND, SCENE_W * 2, 10);
     platforms.push(ground_sp);
 }
 
@@ -101,7 +106,9 @@ function run_dialogue() {
     if (cur_text) {
         textbox_sp.visible = true;
         var display_text = cur_text.role + ': ' + cur_text.text;
-        text(display_text, 50, 40);
+        textSize(SCENE_H / 40);
+        textAlign(CENTER, CENTER);
+        text(display_text, SCENE_W/2, 50);
     } else {
         textbox_sp.visible = false;
     }

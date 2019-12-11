@@ -1,6 +1,4 @@
 var background_img;
-var city_img;
-var city_sp;
 
 var house_sp;
 var house_off_img;
@@ -11,33 +9,26 @@ var house_off_check = false;
 var dude_sp;
 var dude_img;
 
-var SCENE_W = 1280;
-var SCENE_H = 960;
-
 function setup() {
 
     dialogues = dialogues_raw.chapter8;
 
-    createCanvas(SCENE_W / 2, SCENE_H / 2);
+    createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/background.png');
-    background_img.resize(SCENE_W, SCENE_H);
-
-    city_img = loadImage('img/city_small.png');
-    city_sp = createSprite(0, 400);
-    city_sp.addImage(city_img);
+    background_img = loadImage('img/bg_lvl2.png');
 
     create_gamechar();
     create_ground();
     create_textbox();
 
-    house_sp = createSprite(450, 350);
+    house_sp = createSprite(3 * SCENE_W / 4, SCENE_GROUND - 110);
     house_on_img = loadImage('img/aggrohouse_small_on.png');
     house_off_img = loadImage('img/aggrohouse_small_off.png');
     house_sp.addImage('on', house_on_img);
     house_sp.addImage('off', house_off_img);
 
 }
+
 function draw() {
     background(background_img);
 
@@ -58,7 +49,7 @@ function draw() {
         };
     }
 
-    if ((house_off_check) && (gamechar_sp.position.x > 620)) {
+    if ((house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
         document.location.href = 'index.html';
     }
 
