@@ -22,7 +22,10 @@ var ground_sp;
 var platforms = [];
 
 function preload() {
-    dialogues_raw = loadJSON("json/dialogues.json");
+    // loadJSON seems to lack {cache: false} option, so we fool browser not to
+    // cache by hand
+    var u_date = Date.now();
+    dialogues_raw = loadJSON("json/dialogues.json?_u=" + u_date);
 }
 
 function apply_gravity() {
