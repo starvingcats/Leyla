@@ -12,6 +12,7 @@ var moths_sp;
 
 function setup() {
 
+    has_camera = true;
     dialogues = dialogues_raw.chapter4;
 
     createCanvas(SCENE_W, SCENE_H);
@@ -24,7 +25,6 @@ function setup() {
 
     create_gamechar();
     create_ground();
-    create_textbox();
 
     lamp_sp = createSprite(SCENE_W / 2, SCENE_GROUND - 50);
     lamp_on_img = loadImage('img/lampe_small.png');
@@ -35,6 +35,7 @@ function setup() {
     moths_sp = createSprite(SCENE_W / 2, SCENE_GROUND - 50);
     moths_sp.addAnimation('swarming', 'img/moth1_small.png', 'img/moth2_small.png')
 
+    create_textbox();
 }
 
 function draw() {

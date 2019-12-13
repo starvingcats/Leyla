@@ -21,6 +21,9 @@ var textbox_img;
 var ground_sp;
 var platforms = [];
 
+var has_camera;
+
+
 function preload() {
     // loadJSON seems to lack {cache: false} option, so we fool browser not to
     // cache by hand
@@ -104,6 +107,7 @@ function create_ground() {
 }
 
 function run_dialogue() {
+
     var cur_dialogue_list = dialogues[cur_dialogue];
     var cur_text = cur_dialogue_list[cur_dialogue_step];
     if (cur_text) {
@@ -111,7 +115,14 @@ function run_dialogue() {
         var display_text = cur_text.role + ': ' + cur_text.text;
         textSize(SCENE_H / 40);
         textAlign(CENTER, CENTER);
-        text(display_text, SCENE_W/2, 50);
+        if (has_camera) {
+            textbox_sp.velocity.x = gamechar_sp.velocity.x;
+            textbox_sp.position.x = gamechar_sp.position.x;
+            text(display_text, gamechar_sp.position.x, 50);
+        } else {
+            text(display_text, SCENE_W/2, 50);
+        }
+
     } else {
         textbox_sp.visible = false;
     }

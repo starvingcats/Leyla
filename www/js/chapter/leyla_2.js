@@ -4,12 +4,13 @@ var city_sp;
 
 function setup() {
 
+    has_camera = true;
+
     dialogues = dialogues_raw.chapter2;
 
     createCanvas(SCENE_W, SCENE_H);
 
     create_ground();
-    create_textbox();
 
     background_img = loadImage('img/bg_city.png');
     background_img.resize(SCENE_W, SCENE_H);
@@ -22,9 +23,11 @@ function setup() {
     gamechar_img = loadImage('img/car_small.png');
     gamechar_sp.addImage(gamechar_img);
 
+    create_textbox();
 }
 
 function draw() {
+
     background(background_img);
 
     apply_gravity();
