@@ -60,7 +60,7 @@ function draw() {
     run_dialogue();
 
     if ((telescope_seen) && (gamechar_sp.position.x > SCENE_RBOUND)) {
-        document.location.href = 'chapter2.html';
+        transition('chapter2.html');
     }
 
 }

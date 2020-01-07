@@ -22,6 +22,7 @@ var ground_sp;
 var platforms = [];
 
 var has_camera;
+var fading = false;
 
 
 function preload() {
@@ -126,4 +127,37 @@ function run_dialogue() {
     } else {
         textbox_sp.visible = false;
     }
+}
+
+function wait(ms) {
+    return new Promise(
+        function(resolve) {
+            setTimeout(resolve, ms);
+        }
+    );
+}
+
+function fade() {
+    element = document.getElementById('defaultCanvas0');
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+
+function transition(target) {
+    if ( fading ) {
+        return;
+    }
+    fade();
+    wait(2 * 1000).then(function() {
+        document.location.href = target;
+    });
+    fading = true;
 }

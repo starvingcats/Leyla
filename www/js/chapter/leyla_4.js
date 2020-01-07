@@ -64,7 +64,7 @@ function draw() {
     }
 
     if ((lamp_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
-        document.location.href = 'chapter5.html';
+        transition('chapter5.html');
     }
 
     check_scene_bounds();

@@ -81,7 +81,7 @@ function draw() {
   }
 
   if ((house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
-      document.location.href = 'chapter4.html';
+      transition('chapter4.html');
   }
 
   check_scene_bounds();

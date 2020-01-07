@@ -50,7 +50,7 @@ function draw() {
     }
 
     if ((house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
-        document.location.href = 'index.html';
+        transition('index.html');
     }
 
     check_scene_bounds();

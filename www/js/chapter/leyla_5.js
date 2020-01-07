@@ -93,7 +93,7 @@ function draw() {
     if ( (spot_1_sp.mirrorY() == -1) &&
          (spot_2_sp.mirrorY() == -1) &&
          (gamechar_sp.position.x > SCENE_RBOUND) ) {
-        document.location.href = 'chapter6.html';
+        transition('chapter6.html');
     }
 
     check_scene_bounds();
