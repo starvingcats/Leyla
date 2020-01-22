@@ -2,22 +2,36 @@
   "chapter1": {
     "intro": [
       {
-        "role": "leyla",
-        "text": "Die Sterne sind aber schön heute Nacht!"
+        "role": "Mom",
+        "text": "Go to grandpa to watch stars with him before we move"
       },
       {
-        "role": "leyla",
-        "text": "Ich muss durch das Teleskop schauen!"
+        "role": "Leyla",
+        "text": "OK mom."
+      }
+    ],
+    "grandpa": [
+      {
+        "role": "Grandpa",
+        "text": "Stars are beautiful tonight, take a look!"
+      },
+      {
+        "role": "Leyla",
+        "text": "OK grandpa."
       }
     ],
     "outro": [
       {
-        "role": "mother",
-        "text": "Komm nach Hause!"
+        "role": "Mom",
+        "text": "Leyla, come home, we're moving!"
       },
       {
-        "role": "leyla",
-        "text": "Jaja, is ja gut!"
+        "role": "Mom",
+        "text": "Let's start, get into the car!"
+      },
+      {
+        "role": "Leyla",
+        "text": "OK mom."
       }
     ]
   },

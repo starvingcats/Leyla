@@ -33,8 +33,7 @@ function draw() {
     apply_gravity();
     basic_movement();
 
-    camera.position.x = gamechar_sp.position.x;
-    camera.position.y = gamechar_sp.position.y - 300;
+    focus_gamechar();
 
     if (keyWentDown('f')) {
         cur_dialogue_step += 1;

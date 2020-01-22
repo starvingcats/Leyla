@@ -90,9 +90,18 @@ function check_scene_bounds() {
 
 }
 
-function create_gamechar() {
-    gamechar_sp = createSprite(SCENE_W/15, SCENE_H - 60);
-    gamechar_sp.addAnimation('walking', 'img/leylawalk_1.png', 'img/leylawalk_2.png', 'img/leylawalk_3.png', 'img/leylawalk_4.png');
+function create_gamechar(position_x) {
+    if (!position_x) {
+        position_x = SCENE_W/15;
+    }
+    gamechar_sp = createSprite(position_x, SCENE_H - 80);
+    gamechar_sp.addAnimation(
+        'walking',
+        'img/leylawalk_1.png',
+        'img/leylawalk_2.png',
+        'img/leylawalk_3.png',
+        'img/leylawalk_4.png'
+    );
     gamechar_sp.addAnimation('standing', 'img/leylawalk_1.png');
 }
 
@@ -160,4 +169,9 @@ function transition(target) {
         document.location.href = target;
     });
     fading = true;
+}
+
+function focus_gamechar() {
+    camera.position.x = gamechar_sp.position.x;
+    camera.position.y = gamechar_sp.position.y - SCENE_H / 2 + 70; // 70 = half y-size of gamechar, 30 = offset to ground
 }
