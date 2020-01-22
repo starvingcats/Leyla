@@ -92,8 +92,8 @@ function check_scene_bounds() {
 
 function create_gamechar() {
     gamechar_sp = createSprite(SCENE_W/15, SCENE_H - 60);
-    gamechar_sp.addAnimation('walking', 'img/leylawalk1_small.png', 'img/leylawalk2_small.png');
-    gamechar_sp.addAnimation('standing', 'img/leylawalk1_small.png');
+    gamechar_sp.addAnimation('walking', 'img/leylawalk_1.png', 'img/leylawalk_2.png', 'img/leylawalk_3.png', 'img/leylawalk_4.png');
+    gamechar_sp.addAnimation('standing', 'img/leylawalk_1.png');
 }
 
 function create_textbox() {
