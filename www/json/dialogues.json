@@ -40,7 +40,9 @@
       {
         "role": "leyla",
         "text": "Jetzt ziehen wir in die Stadt..."
-      },
+      }
+    ],
+    "city": [
       {
         "role": "leyla",
         "text": "Ich sehe ja gar keine Sterne!"

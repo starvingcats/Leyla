@@ -4,9 +4,11 @@ var background_sp;
 var city_img;
 var city_sp;
 
+
 function setup() {
 
     has_camera = true;
+    car_mode = true;
 
     dialogues = dialogues_raw.chapter2;
 
@@ -26,7 +28,7 @@ function setup() {
     city_sp.addImage(city_img);
     */
 
-    gamechar_sp = createSprite(50, SCENE_H - 60);
+    gamechar_sp = createSprite(50, SCENE_H - 100);
     gamechar_img = loadImage('img/car_driving.png');
     gamechar_sp.addImage(gamechar_img);
 
@@ -44,6 +46,11 @@ function draw() {
 
     if (keyWentDown('f')) {
         cur_dialogue_step += 1;
+    }
+
+    if ((gamechar_sp.position.x > SCENE_RBOUND / 2) && (cur_dialogue != 'city')) {
+        cur_dialogue = 'city';
+        cur_dialogue_step = 0;
     }
 
     if ((true) && (gamechar_sp.position.x > SCENE_RBOUND)) {

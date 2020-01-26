@@ -23,7 +23,7 @@ var platforms = [];
 
 var has_camera;
 var fading = false;
-
+var car_mode = false;
 
 function preload() {
     // loadJSON seems to lack {cache: false} option, so we fool browser not to
@@ -55,11 +55,15 @@ function basic_movement() {
     }
     if (keyWentDown('a')) {
         gamechar_sp.velocity.x = -5;
-        gamechar_sp.mirrorX(-1);
+        if (!car_mode) {
+            gamechar_sp.mirrorX(-1);
+        }
     }
     if (keyWentUp('a')) {
         gamechar_sp.velocity.x = 0;
-        gamechar_sp.mirrorX(1);
+        if (!car_mode) {
+            gamechar_sp.mirrorX(1);
+        }
     }
 
     if (keyWentDown('d')) {
