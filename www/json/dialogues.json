@@ -73,7 +73,33 @@
     "intro": [
       {
         "role": "leyla",
-        "text": "Die Motten sind gefangen. Hier ist eine Zeitschaltuhr nützlich!"
+        "text": "Mal sehen, was ich hier tun kann."
+      }
+    ],
+    "person": [
+      {
+        "role": "leyla",
+        "text": "Die Motten sind gefangen."
+      },
+      {
+        "role": "person",
+        "text": "go to the janitor."
+      }
+    ],
+    "janitor": [
+      {
+        "role": "leyla",
+        "text": "i need money"
+      },
+      {
+        "role": "janitor",
+        "text": "here you are"
+      }
+    ],
+    "outro": [
+      {
+        "role": "leyla",
+        "text": "now the moths are free!"
       }
     ]
   },

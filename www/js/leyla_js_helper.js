@@ -54,7 +54,7 @@ function basic_movement() {
         }
     }
     if (keyWentDown('a')) {
-        gamechar_sp.velocity.x = -5;
+        gamechar_sp.velocity.x = -10;
         if (!car_mode) {
             gamechar_sp.mirrorX(-1);
         }
@@ -67,7 +67,7 @@ function basic_movement() {
     }
 
     if (keyWentDown('d')) {
-        gamechar_sp.velocity.x = 5;
+        gamechar_sp.velocity.x = 10;
     }
     if (keyWentUp('d')) {
         gamechar_sp.velocity.x = 0;
@@ -106,7 +106,7 @@ function create_gamechar(position_x) {
         'img/leylawalk_3.png',
         'img/leylawalk_4.png'
     );
-    gamechar_sp.addAnimation('standing', 'img/leylawalk_1.png');
+    gamechar_sp.addAnimation('standing', 'img/leylawalk_4.png');
 }
 
 function create_textbox() {
