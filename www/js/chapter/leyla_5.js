@@ -1,102 +1,119 @@
 var background_img;
 
-var poster_img;
-var poster_sp;
+var kioskspot_1_sp;
+var kioskspot_1_on_img;
+var kioskspot_1_off_img;
+var kioskspot_1_check = false;
 
-var spot_img;
-var spot_1_sp;
-var spot_2_sp;
-var spot_1_up;
-var spot_2_up;
-var spot_places = [];
+var kioskspot_2_sp;
+var kioskspot_2_on_img;
+var kioskspot_2_off_img;
+var kioskspot_2_check = false;
+
+var cafespot_sp;
+var cafespot_on_img;
+var cafespot_off_img;
+var cafespot_check = false;
 
 var platform_1_sp;
 var platform_2_sp;
-var platform_3_sp;
 var platforms = [];
 
 var pickables = [];
 var picked;
 
+var person_sp;
+var person_img;
+
+var person_check = false;
+var done_check = false;
+
 function setup() {
 
     dialogues = dialogues_raw.chapter5;
+    has_camera = true;
 
     createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/bg_lvl2.png');
+    background_img = loadImage('img/lvl5_background.png');
+    background_sp = createSprite(1900, 360);
+    background_sp.addImage(background_img);
+    SCENE_RBOUND = 3700;
+    JUMP = 22;
 
     create_gamechar();
     create_ground();
     create_textbox();
 
-    platform_1_sp = createSprite((3 * SCENE_W / 4) - 100, SCENE_GROUND - 50, 25, 5);
-    platform_2_sp = createSprite((3 * SCENE_W / 4) - 100, SCENE_GROUND - 100, 25, 5);
-    platform_3_sp = createSprite((3 * SCENE_W / 4) - 15, SCENE_GROUND - 155, 200, 5);
+    person_img = loadImage('img/lvl5_person.png');
+    person_sp = createSprite(1300, SCENE_GROUND - 110);
+    person_sp.addImage(person_img);
+
+    kioskspot_1_on_img = loadImage('img/lvl5_kioskspot_1.png');
+    kioskspot_1_off_img = loadImage('img/lvl5_kioskspot_1_off.png');
+    kioskspot_1_sp = createSprite(1350, SCENE_GROUND - 400);
+    kioskspot_1_sp.addImage('on', kioskspot_1_on_img);
+    kioskspot_1_sp.addImage('off', kioskspot_1_off_img);
+
+    kioskspot_2_on_img = loadImage('img/lvl5_kioskspot_2.png');
+    kioskspot_2_off_img = loadImage('img/lvl5_kioskspot_2_off.png');
+    kioskspot_2_sp = createSprite(1600, SCENE_GROUND - 400);
+    kioskspot_2_sp.addImage('on', kioskspot_2_on_img);
+    kioskspot_2_sp.addImage('off', kioskspot_2_off_img);
+
+    cafespot_on_img = loadImage('img/lvl5_cafespot.png');
+    cafespot_off_img = loadImage('img/lvl5_cafespots_off.png');
+    cafespot_sp = createSprite(3000, SCENE_GROUND- 510);
+    cafespot_sp.addImage('on', cafespot_on_img);
+    cafespot_sp.addImage('off', cafespot_off_img);
+
+    platform_1_sp = createSprite(3000, SCENE_GROUND- 380, 500, 5);
+    platform_2_sp = createSprite(2350, SCENE_GROUND- 200, 400, 5);
     platforms.push(platform_1_sp);
     platforms.push(platform_2_sp);
-    platforms.push(platform_3_sp);
-
-    poster_sp = createSprite(3 * SCENE_W / 4, SCENE_GROUND - 80);
-    poster_img = loadImage('img/plakat_small.png');
-    poster_sp.addImage(poster_img);
-
-    spot_img = loadImage('img/plakatstrahler_small.png')
-    spot_1_sp = createSprite((3 * SCENE_W / 4) - 50, SCENE_GROUND - 120);
-    spot_1_up = createSprite((3 * SCENE_W / 4) - 50, SCENE_GROUND - 180, 20 , 20);
-    spot_1_sp.addImage(spot_img);
-    pickables.push(spot_1_sp);
-    spot_places.push(spot_1_up);
-    spot_1_up.visible = false;
-
-    spot_2_sp = createSprite((3 * SCENE_W / 4) + 50, SCENE_GROUND - 120);
-    spot_2_up = createSprite((3 * SCENE_W / 4) + 50, SCENE_GROUND - 180, 20 , 20);
-    spot_2_sp.addImage(spot_img);
-    pickables.push(spot_2_sp);
-    spot_places.push(spot_2_up);
-    spot_2_up.visible = false;
 
 }
 
 function draw() {
 
-    background(background_img);
+    //background(background_img);
     apply_gravity();
     basic_movement();
+    focus_gamechar();
 
     if (keyWentDown('f')) {
-      if ( !picked ) {
-        for (var i = 0; i < pickables.length; i++) {
-          var pickable = pickables[i];
-          if ( (gamechar_sp.overlap(pickable)) && (pickable.mirrorY() != -1) ) {
-            picked = pickable;
-            picked.visible = false;
+        if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
+            cur_dialogue = 'person';
+            cur_dialogue_step = 0;
+            person_check = true;
+        } else if ((gamechar_sp.overlap(kioskspot_1_sp)) && (person_check) && (cur_dialogue_step > 1)) {
+            kioskspot_1_sp.changeImage('off');
+            kioskspot_1_check = true;
+        } else if ((gamechar_sp.overlap(kioskspot_2_sp)) && (person_check) && (cur_dialogue_step > 1)) {
+            kioskspot_2_sp.changeImage('off');
+            kioskspot_2_check = true;
+
+        } else if ((gamechar_sp.overlap(cafespot_sp)) && (person_check)) {
+            cafespot_sp.changeImage('off');
+            cafespot_check = true;
         } else {
             cur_dialogue_step += 1;
-        }
-        }
-      } else {
-        for (var i = 0; i < spot_places.length; i++) {
-          var spot_place = spot_places[i];
-          if (gamechar_sp.overlap(spot_place)) {
-            picked.visible = true;
-            picked.mirrorY(-1);
-            picked.position.y = picked.position.y + 10;
-            picked = null;
-        } else {
-            cur_dialogue_step += 1;
-        }
-        }
-      }
+        };
+
     }
 
-    if ( (spot_1_sp.mirrorY() == -1) &&
-         (spot_2_sp.mirrorY() == -1) &&
-         (gamechar_sp.position.x > SCENE_RBOUND) ) {
+    if ( (kioskspot_1_check) && (kioskspot_2_check) && (cafespot_check) && (!done_check)) {
+        cur_dialogue = 'outro';
+        cur_dialogue_step = 0;
+        done_check = true;
+    }
+
+    if ( (gamechar_sp.position.x > SCENE_RBOUND) && (done_check) ) {
         transition('chapter6.html');
     }
 
     check_scene_bounds();
     drawSprites();
     run_dialogue();
+    camera.off();
 }

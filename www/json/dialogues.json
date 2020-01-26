@@ -107,7 +107,23 @@
     "intro": [
       {
         "role": "leyla",
-        "text": "Die Lampen dürfen nicht in den Himmel strahlen"
+        "text": "Many lamps here..."
+      }
+    ],
+    "person": [
+      {
+        "role": "person",
+        "text": "cant sleep..."
+      },
+      {
+        "role": "leyla",
+        "text": "ill put out the lamps..."
+      }
+    ],
+    "outro": [
+      {
+        "role": "leyla",
+        "text": "now these people can sleep!"
       }
     ]
   },
