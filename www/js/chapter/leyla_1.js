@@ -26,9 +26,8 @@ function setup() {
     dialogues = dialogues_raw.chapter1;
 
     createCanvas(SCENE_W, SCENE_H);
-
-    create_textbox();
     create_ground();
+    create_textbox();
 
     background_img = loadImage('img/lvl1_background.png');
     background_img.resize(SCENE_W, SCENE_H);

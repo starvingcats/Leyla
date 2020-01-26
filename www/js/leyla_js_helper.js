@@ -94,7 +94,7 @@ function create_gamechar(position_x) {
     if (!position_x) {
         position_x = SCENE_W/15;
     }
-    gamechar_sp = createSprite(position_x, SCENE_H - 80);
+    gamechar_sp = createSprite(position_x, SCENE_H - 250);
     gamechar_sp.addAnimation(
         'walking',
         'img/leylawalk_1.png',
@@ -112,7 +112,7 @@ function create_textbox() {
 }
 
 function create_ground() {
-    ground_sp = createSprite(0, SCENE_GROUND, SCENE_W * 2, 10);
+    ground_sp = createSprite(0, SCENE_GROUND, SCENE_RBOUND * 2, 10);
     platforms.push(ground_sp);
 }
 
@@ -173,5 +173,5 @@ function transition(target) {
 
 function focus_gamechar() {
     camera.position.x = gamechar_sp.position.x;
-    camera.position.y = gamechar_sp.position.y - SCENE_H / 2 + 70; // 70 = half y-size of gamechar, 30 = offset to ground
+    //camera.position.y = gamechar_sp.position.y - SCENE_H / 2 + 70; // 70 = half y-size of gamechar, 30 = offset to ground
 }

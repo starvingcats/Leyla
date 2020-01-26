@@ -1,4 +1,6 @@
 var background_img;
+var background_sp;
+
 var city_img;
 var city_sp;
 
@@ -9,18 +11,23 @@ function setup() {
     dialogues = dialogues_raw.chapter2;
 
     createCanvas(SCENE_W, SCENE_H);
+    //createCanvas(3000, SCENE_H);
+    SCENE_RBOUND = 3000;
 
     create_ground();
+    background_img = loadImage('img/lvl2_background.png');
+    background_sp = createSprite(0, 366);
+    background_sp.addImage(background_img);
+    //background_img.resize(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/bg_city.png');
-    background_img.resize(SCENE_W, SCENE_H);
-
+    /*
     city_img = loadImage('img/city.png');
     city_sp = createSprite(500, SCENE_H - 100);
     city_sp.addImage(city_img);
+    */
 
     gamechar_sp = createSprite(50, SCENE_H - 60);
-    gamechar_img = loadImage('img/car_small.png');
+    gamechar_img = loadImage('img/car_driving.png');
     gamechar_sp.addImage(gamechar_img);
 
     create_textbox();
@@ -28,7 +35,7 @@ function setup() {
 
 function draw() {
 
-    background(background_img);
+    //background(background_img);
 
     apply_gravity();
     basic_movement();
