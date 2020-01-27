@@ -26,10 +26,6 @@ function setup() {
     background_sp.addImage(background_img);
     SCENE_RBOUND = 5500;
 
-    create_gamechar();
-    create_ground();
-    create_textbox();
-
     wrench_img = loadImage('img/lvl6_wrench.png');
     wrench_sp = createSprite(4 * SCENE_W, SCENE_H - 50);
     wrench_sp.addImage(wrench_img);
@@ -55,6 +51,10 @@ function setup() {
     lamp3_sp.addImage('high', lamp_high_img);
     lamp3_sp.addImage('low', lamp_low_img);
     lamp3_sp.changeImage('even');
+
+    create_gamechar();
+    create_ground();
+    create_textbox();
 }
 
 function draw() {

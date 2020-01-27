@@ -39,7 +39,7 @@ function setup() {
     create_textbox();
 
     midground_img = loadImage('img/lvl1_midground.png');
-    midground_sp = createSprite(0, SCENE_H - 285);
+    midground_sp = createSprite(0, SCENE_H - 270);
     midground_sp.addImage(midground_img);
 
     telescope_stars_img = loadImage('img/stars_splash.png');

@@ -41,9 +41,6 @@ function setup() {
     SCENE_RBOUND = 3700;
     JUMP = 22;
 
-    create_gamechar();
-    create_ground();
-    create_textbox();
 
     person_img = loadImage('img/lvl5_person.png');
     person_sp = createSprite(1300, SCENE_GROUND - 110);
@@ -72,6 +69,9 @@ function setup() {
     platforms.push(platform_1_sp);
     platforms.push(platform_2_sp);
 
+    create_gamechar();
+    create_ground();
+    create_textbox();
 }
 
 function draw() {

@@ -35,15 +35,6 @@ function setup() {
     background_sp = createSprite(2200, 360);
     background_sp.addImage(background_img);
 
-    /*
-    city_img = loadImage('img/city.png');
-    city_sp = createSprite(500, SCENE_H - 100);
-    city_sp.addImage(city_img);
-    */
-
-    create_gamechar();
-    create_ground();
-
     person_img = loadImage('img/lvl4_person.png');
     person_sp = createSprite(500, SCENE_GROUND - 110);
     person_sp.addImage(person_img);
@@ -65,6 +56,8 @@ function setup() {
     moths_sp = createSprite(1000, SCENE_GROUND - 600);
     moths_sp.addAnimation('swarming', 'img/lvl4_moths_1.png', 'img/lvl4_moths_2.png', 'img/lvl4_moths_3.png')
 
+    create_gamechar();
+    create_ground();
     create_textbox();
 }
 
