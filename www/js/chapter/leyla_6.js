@@ -11,10 +11,15 @@ var monument_img;
 function setup() {
 
     dialogues = dialogues_raw.chapter6;
+    has_camera = true;
 
     createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/bg_lvl2.png');
+    background_img = loadImage('img/lvl5_background.png');
+    background_sp = createSprite(1900, 360);
+    background_sp.addImage(background_img);
+    SCENE_RBOUND = 3700;
+
 
     create_gamechar();
     create_ground();
@@ -35,6 +40,7 @@ function draw() {
 
     apply_gravity();
     basic_movement();
+    focus_gamechar();
 
     if (keyWentDown('f')) {
         if (gamechar_sp.overlap(lamp_sp)) {
@@ -59,4 +65,5 @@ function draw() {
     check_scene_bounds();
     drawSprites();
     run_dialogue();
+    camera.off();
 }

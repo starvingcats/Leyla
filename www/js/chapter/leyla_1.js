@@ -1,4 +1,5 @@
 var background_img;
+var background_sp;
 
 var telescope_sp;
 var telescope_img;
@@ -27,10 +28,15 @@ function setup() {
 
     createCanvas(SCENE_W, SCENE_H);
     create_ground();
-    create_textbox();
 
+    //background_img = loadImage('img/lvl1_background.png');
+    //background_img.resize(SCENE_W, SCENE_H);
     background_img = loadImage('img/lvl1_background.png');
-    background_img.resize(SCENE_W, SCENE_H);
+    background_sp = createSprite(0, 360);
+    background_sp.addImage(background_img);
+    SCENE_RBOUND = 900;
+
+    create_textbox();
 
     midground_img = loadImage('img/lvl1_midground.png');
     midground_sp = createSprite(0, SCENE_H - 285);
@@ -60,8 +66,6 @@ function setup() {
 function draw() {
     if (telescope_off_check) {
         background(telescope_stars_img);
-    } else {
-        background(background_img);
     }
 
     if (keyWentDown('f')) {
