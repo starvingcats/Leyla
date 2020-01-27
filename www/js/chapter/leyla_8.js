@@ -12,10 +12,14 @@ var dude_img;
 function setup() {
 
     dialogues = dialogues_raw.chapter8;
+    has_camera = true;
 
     createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/bg_lvl2.png');
+    background_img = loadImage('img/lvl8_background.png');
+    background_sp = createSprite(3700, 360);
+    background_sp.addImage(background_img);
+    SCENE_RBOUND = 6000;
 
     create_gamechar();
     create_ground();
@@ -30,10 +34,10 @@ function setup() {
 }
 
 function draw() {
-    background(background_img);
 
     apply_gravity();
     basic_movement();
+    focus_gamechar();
 
     if (keyWentDown('f')) {
         if (gamechar_sp.overlap(house_sp)) {
@@ -56,4 +60,5 @@ function draw() {
     check_scene_bounds();
     drawSprites();
     run_dialogue();
+    camera.off();
 }

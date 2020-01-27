@@ -133,13 +133,45 @@
         "role": "leyla",
         "text": "Dieser Strahler ist falsch ausgerichtet"
       }
+    ],
+    "lamp2": [
+      {
+        "role": "leyla",
+        "text": "Dieser Strahler ist AUCH falsch ausgerichtet"
+      }
     ]
   },
   "chapter7": {
     "intro": [
       {
         "role": "leyla",
-        "text": "Die Laterne leuchtet zu sehr in das Gebüsch"
+        "text": "Schön Licht hier"
+      }
+    ],
+    "person2": [
+      {
+        "role": "leyla",
+        "text": "Licht zu blau"
+      },
+      {
+        "role": "person2",
+        "text": "och."
+      }
+    ],
+    "person1": [
+      {
+        "role": "leyla",
+        "text": "Gib Licht zu orange"
+      },
+      {
+        "role": "person1",
+        "text": "hier orange."
+      }
+    ],
+    "outro": [
+      {
+        "role": "person2",
+        "text": "Danke licht gut"
       }
     ]
   },
