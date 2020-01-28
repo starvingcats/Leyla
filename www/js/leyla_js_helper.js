@@ -25,6 +25,8 @@ var has_camera;
 var fading = false;
 var car_mode = false;
 
+var block_move = false;
+
 function preload() {
     // loadJSON seems to lack {cache: false} option, so we fool browser not to
     // cache by hand
@@ -48,6 +50,14 @@ function apply_gravity() {
 }
 
 function basic_movement() {
+    if (block_move) {
+        if (!car_mode) {
+            gamechar_sp.velocity.x = 0;
+            gamechar_sp.velocity.y = 0;
+        }
+        return;
+    }
+
     if (keyWentDown('space')) {
         if (gamechar_sp.onground) {
             gamechar_sp.velocity.y = -JUMP;
@@ -125,8 +135,10 @@ function run_dialogue() {
     var cur_dialogue_list = dialogues[cur_dialogue];
     var cur_text = cur_dialogue_list[cur_dialogue_step];
     if (cur_text) {
+        block_move = true;
         textbox_sp.visible = true;
         var display_text = cur_text.role + ': ' + cur_text.text;
+        fill('black');
         textSize(SCENE_H / 40);
         textAlign(CENTER, CENTER);
         if (has_camera) {
@@ -138,6 +150,7 @@ function run_dialogue() {
         }
 
     } else {
+        block_move = false;
         textbox_sp.visible = false;
     }
 }

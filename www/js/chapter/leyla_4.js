@@ -74,17 +74,13 @@ function draw() {
         } else if ((gamechar_sp.overlap(janitor_sp)) && (person_check) && (!janitor_check)) {
             switch_dialogue('janitor');
             janitor_check = true;
-        } else if ((gamechar_sp.overlap(lamp_sp)) && (janitor_check)) {
+        } else if ((gamechar_sp.overlap(lamp_sp)) && (janitor_check) && (!lamp_off_check)) {
             if (lamp_sp.getAnimationLabel() == 'on') {
                 lamp_sp.changeImage('off');
                 lamp_light_sp.visible = false;
                 lamp_off_check = true;
                 moths_sp.velocity.y = -5;
                 switch_dialogue('outro');
-            } else {
-                lamp_sp.changeImage('on');
-                lamp_light_sp.visible = true;
-                lamp_off_check = false;
             }
         } else {
             cur_dialogue_step += 1;

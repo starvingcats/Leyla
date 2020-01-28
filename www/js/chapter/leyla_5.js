@@ -83,14 +83,13 @@ function draw() {
         if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
             switch_dialogue('person');
             person_check = true;
-        } else if ((gamechar_sp.overlap(kioskspot_1_sp)) && (person_check) && (cur_dialogue_step > 1)) {
+        } else if ((gamechar_sp.overlap(kioskspot_1_sp)) && (person_check) && (!kioskspot_1_check) && (cur_dialogue_step > 1)) {
             kioskspot_1_sp.changeImage('off');
             kioskspot_1_check = true;
-        } else if ((gamechar_sp.overlap(kioskspot_2_sp)) && (person_check) && (cur_dialogue_step > 1)) {
+        } else if ((gamechar_sp.overlap(kioskspot_2_sp)) && (person_check) && (!kioskspot_2_check) && (cur_dialogue_step > 1)) {
             kioskspot_2_sp.changeImage('off');
             kioskspot_2_check = true;
-
-        } else if ((gamechar_sp.overlap(cafespot_sp)) && (person_check)) {
+        } else if ((gamechar_sp.overlap(cafespot_sp)) && (!cafespot_check) && (person_check)) {
             cafespot_sp.changeImage('off');
             cafespot_check = true;
         } else {
