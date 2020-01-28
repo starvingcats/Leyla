@@ -40,7 +40,7 @@ function setup() {
     midground_sp = createSprite(0, SCENE_H - 270);
     midground_sp.addImage(midground_img);
 
-    telescope_stars_img = loadImage('img/stars_splash.png');
+    telescope_stars_img = loadImage('img/lvl1_telescopeview.png');
 
     telescope_sp = createSprite(100, SCENE_H - 80);
     telescope_img = loadImage('img/telescope.png');

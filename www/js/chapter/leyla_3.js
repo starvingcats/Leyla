@@ -35,10 +35,7 @@ function setup() {
     telescope_stars_img2 = loadImage('img/lvl3_telescopeview_2.png');
     telescope_view = telescope_stars_img;
 
-    create_ground();
-    create_textbox();
-
-    house_sp = createSprite(SCENE_W / 5, SCENE_GROUND - 300);
+    house_sp = createSprite(0, 240);
     house_on_img = loadImage('img/lvl3_house.png');
     house_off_img = loadImage('img/lvl3_house_off.png');
     house_sp.addImage('on', house_on_img);
@@ -48,6 +45,8 @@ function setup() {
     telescope_img = loadImage('img/telescope.png');
     telescope_sp.addImage(telescope_img);
 
+    create_ground();
+    create_textbox();
     create_gamechar();
 
 }
