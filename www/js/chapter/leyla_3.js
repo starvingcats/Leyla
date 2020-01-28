@@ -71,11 +71,10 @@ function draw() {
             }
         } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0)) {
             telescope_off_check = true;
-            cur_dialogue = 'midclue';
-            cur_dialogue_step = 0;
+            switch_dialogue('midclue');
             if (house_off_check) {
                 telescope_seen = true;
-                cur_dialogue = 'outro';
+                switch_dialogue('outro');
             }
         } else {
             cur_dialogue_step += 1;

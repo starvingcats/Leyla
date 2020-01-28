@@ -80,8 +80,7 @@ function draw() {
     }
 
     if ((gamechar_sp.position.x > 2 * SCENE_W) && (cur_dialogue != 'lamp2') && (!lamp_1_check) && (!lamp_2_check)) {
-        cur_dialogue = 'lamp2';
-        cur_dialogue_step = 0;
+        switch_dialogue('lamp2');
     }
 
     if ((lamp_1_check) && (lamp_2_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {

@@ -56,17 +56,14 @@ function draw() {
     if (keyWentDown('f')) {
         if ((gamechar_sp.overlap(person2_sp)) && (!person2_check) && (cur_dialogue_step > 1)) {
             person2_check = true;
-            cur_dialogue = 'person2'
-            cur_dialogue_step = 0;
+            switch_dialogue('person2');
         } else if ((gamechar_sp.overlap(person1_sp)) && (!person1_check) && (person2_check) && (cur_dialogue_step > 1)) {
             person1_check = true;
-            cur_dialogue = 'person1'
-            cur_dialogue_step = 0;
+            switch_dialogue('person1');
         } else if ((gamechar_sp.overlap(house_sp)) && (person1_check) && (person2_check) && (cur_dialogue_step > 1)) {
             house_check = true;
             house_sp.changeImage('warm');
-            cur_dialogue = 'outro'
-            cur_dialogue_step = 0;
+            switch_dialogue('outro');
         } else {
             cur_dialogue_step += 1;
         };

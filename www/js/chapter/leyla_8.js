@@ -91,7 +91,7 @@ function setup() {
     lamp4_sp.changeImage('on');
 
     bus_img = loadImage('img/lvl8_bus.png');
-    bus_sp = createSprite(7100, SCENE_GROUND - 230);
+    bus_sp = createSprite(7800, SCENE_GROUND - 230);
     bus_sp.addImage(bus_img);
     bus_sp.visible = false;
 
@@ -130,11 +130,16 @@ function draw() {
         billboard2_sp.changeImage('off');
     }
 
-    if ((lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) &&(gamechar_sp.position.x > SCENE_RBOUND - 200)) {
+    if ((!bus_sp.visible) && (lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) &&(gamechar_sp.position.x > SCENE_RBOUND - 200)) {
         bus_sp.visible = true;
+        bus_sp.velocity.x = -5;
+        wait(3 * 1000).then(function() {
+            bus_sp.velocity.x = 0;
+            transition('index.html');
+        });
     }
 
-    if ((lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) &&(gamechar_sp.position.x > SCENE_RBOUND)) {
+    if ((false) && (lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) &&(gamechar_sp.position.x > SCENE_RBOUND)) {
         transition('index.html');
     }
 

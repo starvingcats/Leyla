@@ -17,7 +17,7 @@ function setup() {
 
     create_ground();
     background_img = loadImage('img/lvl2_background.png');
-    background_sp = createSprite(0, 366);
+    background_sp = createSprite(200, 366);
     background_sp.addImage(background_img);
 
     gamechar_sp = createSprite(50, SCENE_H - 100);
@@ -39,8 +39,7 @@ function draw() {
     }
 
     if ((gamechar_sp.position.x > SCENE_RBOUND / 2) && (cur_dialogue != 'city')) {
-        cur_dialogue = 'city';
-        cur_dialogue_step = 0;
+        switch_dialogue('city');
     }
 
     if ((true) && (gamechar_sp.position.x > SCENE_RBOUND)) {

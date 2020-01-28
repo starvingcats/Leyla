@@ -178,3 +178,8 @@ function transition(target) {
 function focus_gamechar() {
     camera.position.x = gamechar_sp.position.x;
 }
+
+function switch_dialogue(dialogue) {
+    cur_dialogue = dialogue;
+    cur_dialogue_step = 0;
+}

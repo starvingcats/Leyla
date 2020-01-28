@@ -81,8 +81,7 @@ function draw() {
 
     if (keyWentDown('f')) {
         if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
-            cur_dialogue = 'person';
-            cur_dialogue_step = 0;
+            switch_dialogue('person');
             person_check = true;
         } else if ((gamechar_sp.overlap(kioskspot_1_sp)) && (person_check) && (cur_dialogue_step > 1)) {
             kioskspot_1_sp.changeImage('off');
@@ -101,8 +100,7 @@ function draw() {
     }
 
     if ( (kioskspot_1_check) && (kioskspot_2_check) && (cafespot_check) && (!done_check)) {
-        cur_dialogue = 'outro';
-        cur_dialogue_step = 0;
+        switch_dialogue('outro');
         done_check = true;
     }
 
