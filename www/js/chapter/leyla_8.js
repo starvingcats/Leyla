@@ -135,12 +135,8 @@ function draw() {
         bus_sp.velocity.x = -5;
         wait(3 * 1000).then(function() {
             bus_sp.velocity.x = 0;
-            transition('index.html');
+            transition('end.html');
         });
-    }
-
-    if ((false) && (lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) &&(gamechar_sp.position.x > SCENE_RBOUND)) {
-        transition('index.html');
     }
 
     check_scene_bounds();
