@@ -15,6 +15,8 @@ var car_img;
 var car_sp;
 
 var telescope_stars_img;
+var telescope_stars_img2;
+var telescope_view;
 
 function setup() {
 
@@ -30,6 +32,8 @@ function setup() {
     SCENE_RBOUND = 900;
 
     telescope_stars_img = loadImage('img/lvl3_telescopeview.png');
+    telescope_stars_img2 = loadImage('img/lvl3_telescopeview_2.png');
+    telescope_view = telescope_stars_img;
 
     create_ground();
     create_textbox();
@@ -51,7 +55,7 @@ function setup() {
 function draw() {
 
     if ((telescope_off_check)) {
-        background(telescope_stars_img);
+        background(telescope_view);
     }
 
     apply_gravity();
@@ -71,6 +75,7 @@ function draw() {
         } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0) && (cur_dialogue == 'houseoff')) {
             telescope_off_check = true;
             telescope_seen = true;
+            telescope_view = telescope_stars_img2;
             switch_dialogue('outro');
         } else {
             cur_dialogue_step += 1;
