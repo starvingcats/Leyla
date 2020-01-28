@@ -177,5 +177,4 @@ function transition(target) {
 
 function focus_gamechar() {
     camera.position.x = gamechar_sp.position.x;
-    //camera.position.y = gamechar_sp.position.y - SCENE_H / 2 + 70; // 70 = half y-size of gamechar, 30 = offset to ground
 }

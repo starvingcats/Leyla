@@ -29,8 +29,6 @@ function setup() {
     createCanvas(SCENE_W, SCENE_H);
     create_ground();
 
-    //background_img = loadImage('img/lvl1_background.png');
-    //background_img.resize(SCENE_W, SCENE_H);
     background_img = loadImage('img/lvl1_background.png');
     background_sp = createSprite(0, 360);
     background_sp.addImage(background_img);
@@ -74,21 +72,13 @@ function draw() {
             return;
         }
         if ( (gamechar_sp.overlap(telescope_sp)) && (cur_dialogue != 'grandpa') ) {
-
             cur_dialogue = 'grandpa';
             cur_dialogue_step = 0;
-            /*
-            telescope_off_check = true;
-            telescope_seen = true;
-            cur_dialogue = 'outro';
-            cur_dialogue_step = 0;
-            */
         } else if ( (gamechar_sp.overlap(telescope_sp)) && (cur_dialogue == 'grandpa') ) {
             telescope_off_check = true;
             telescope_seen = true;
             cur_dialogue = 'outro';
             cur_dialogue_step = 0;
-
         } else {
             cur_dialogue_step += 1;
         }

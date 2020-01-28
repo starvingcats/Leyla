@@ -41,7 +41,6 @@ function setup() {
     SCENE_RBOUND = 3700;
     JUMP = 22;
 
-
     person_img = loadImage('img/lvl5_person.png');
     person_sp = createSprite(1300, SCENE_GROUND - 110);
     person_sp.addImage(person_img);
@@ -76,7 +75,6 @@ function setup() {
 
 function draw() {
 
-    //background(background_img);
     apply_gravity();
     basic_movement();
     focus_gamechar();

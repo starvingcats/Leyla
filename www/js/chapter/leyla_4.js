@@ -62,17 +62,10 @@ function setup() {
 }
 
 function draw() {
-    //background(background_img);
-    camera.zoom = 1;
 
     apply_gravity();
     basic_movement();
     focus_gamechar();
-
-    /*
-    camera.position.x = gamechar_sp.position.x;
-    camera.position.y = gamechar_sp.position.y - 330;
-    */
 
     if (keyWentDown('f')) {
         if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
