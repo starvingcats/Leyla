@@ -23,11 +23,11 @@ function setup() {
     dialogues = dialogues_raw.chapter3;
 
     createCanvas(SCENE_W, SCENE_H);
-    SCENE_RBOUND = 1000;
 
     background_img = loadImage('img/lvl3_background.png');
-    background_sp = createSprite(0, 366);
+    background_sp = createSprite(500, 366);
     background_sp.addImage(background_img);
+    SCENE_RBOUND = 900;
 
     telescope_stars_img = loadImage('img/lvl3_telescopeview.png');
 
@@ -40,7 +40,7 @@ function setup() {
     house_sp.addImage('on', house_on_img);
     house_sp.addImage('off', house_off_img);
 
-    telescope_sp = createSprite(SCENE_W / 2, SCENE_GROUND - 60);
+    telescope_sp = createSprite(800, SCENE_GROUND - 60);
     telescope_img = loadImage('img/telescope.png');
     telescope_sp.addImage(telescope_img);
 
