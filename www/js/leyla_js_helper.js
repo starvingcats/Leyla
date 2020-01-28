@@ -108,7 +108,7 @@ function create_gamechar(position_x) {
     if (!position_x) {
         position_x = SCENE_W/15;
     }
-    gamechar_sp = createSprite(position_x, SCENE_H - 100);
+    gamechar_sp = createSprite(position_x, SCENE_H - 85);
     gamechar_sp.addAnimation(
         'walking',
         'img/leylawalk_1.png',
