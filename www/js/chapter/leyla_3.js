@@ -52,50 +52,46 @@ function draw() {
 
     if ((house_off_check) && (telescope_off_check)) {
         background(telescope_stars_img);
-    }/* else {
-        background(background_img);
-    }*/
+    }
 
-  apply_gravity();
-  basic_movement();
-  focus_gamechar();
-  if (keyWentDown('f')) {
-      if (telescope_off_check) {
-          telescope_off_check = false;
-          return;
-      }
+    apply_gravity();
+    basic_movement();
+    focus_gamechar();
+    if (keyWentDown('f')) {
+        if ((telescope_off_check)) {
+            telescope_off_check = false;
+            return;
+        } else if ((gamechar_sp.overlap(house_sp)) && (cur_dialogue_step > 0)) {
+            if (house_sp.getAnimationLabel() == 'on') {
+                house_sp.changeImage('off');
+                house_off_check = true;
+            } else {
+                house_sp.changeImage('on');
+                house_off_check = false;
+            }
+        } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0)) {
+            telescope_off_check = true;
+            cur_dialogue = 'midclue';
+            cur_dialogue_step = 0;
+            if (house_off_check) {
+                telescope_seen = true;
+                cur_dialogue = 'outro';
+            }
+        } else {
+            cur_dialogue_step += 1;
+        }
+    }
 
-      gamechar_sp.overlap(house_sp, function() {
-          if (house_sp.getAnimationLabel() == 'on') {
-              house_sp.changeImage('off');
-              house_off_check = true;
-          } else {
-              house_sp.changeImage('on');
-              house_off_check = false;
-          }
-      });
+    if ((house_off_check) && (telescope_off_check)) {
+        return;
+    }
 
-      gamechar_sp.overlap(telescope_sp, function() {
-          telescope_off_check = true;
-          cur_dialogue = 'midclue';
-          if (house_off_check) {
-              telescope_seen = true;
-              cur_dialogue = 'outro';
-          }
-      });
+    if ((house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
+        transition('chapter4.html');
+    }
 
-  }
-
-  if ((house_off_check) && (telescope_off_check)) {
-      return;
-  }
-
-  if ((house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
-      transition('chapter4.html');
-  }
-
-  check_scene_bounds();
-  drawSprites();
-  run_dialogue();
-  camera.off();
+    check_scene_bounds();
+    drawSprites();
+    run_dialogue();
+    camera.off();
 }
