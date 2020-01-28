@@ -85,7 +85,7 @@ function draw() {
         return;
     }
 
-    if ((house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
+    if ((telescope_seen) && (house_off_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
         transition('chapter4.html');
     }
 

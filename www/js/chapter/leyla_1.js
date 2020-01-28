@@ -32,7 +32,7 @@ function setup() {
     background_img = loadImage('img/lvl1_background.png');
     background_sp = createSprite(0, 360);
     background_sp.addImage(background_img);
-    SCENE_RBOUND = 900;
+    SCENE_RBOUND = 950;
 
     create_textbox();
 
@@ -54,7 +54,7 @@ function setup() {
     grandpa_img = loadImage('img/grandpa.png');
     grandpa_sp.addImage(grandpa_img);
 
-    mother_sp = createSprite(SCENE_W - 250, SCENE_H - 135);
+    mother_sp = createSprite(SCENE_W - 250, SCENE_H - 120);
     mother_img = loadImage('img/mom.png');
     mother_sp.addImage(mother_img);
 
