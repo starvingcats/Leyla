@@ -62,6 +62,12 @@
         "text": "Ich muss zuerst das Licht in meinem Zimmer ausmachen."
       }
     ],
+    "houseoff": [
+      {
+        "role": "leyla",
+        "text": "Vielleicht jetzt besser?"
+      }
+    ],
     "outro": [
       {
         "role": "leyla",

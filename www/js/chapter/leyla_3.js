@@ -50,7 +50,7 @@ function setup() {
 
 function draw() {
 
-    if ((house_off_check) && (telescope_off_check)) {
+    if ((telescope_off_check)) {
         background(telescope_stars_img);
     }
 
@@ -62,26 +62,22 @@ function draw() {
             telescope_off_check = false;
             return;
         } else if ((gamechar_sp.overlap(house_sp)) && (cur_dialogue_step > 0)) {
-            if (house_sp.getAnimationLabel() == 'on') {
-                house_sp.changeImage('off');
-                house_off_check = true;
-            } else {
-                house_sp.changeImage('on');
-                house_off_check = false;
-            }
-        } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0)) {
+            house_sp.changeImage('off');
+            house_off_check = true;
+            switch_dialogue('houseoff');
+        } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0) && (cur_dialogue != 'midclue')  && (cur_dialogue != 'houseoff')) {
             telescope_off_check = true;
             switch_dialogue('midclue');
-            if (house_off_check) {
-                telescope_seen = true;
-                switch_dialogue('outro');
-            }
+        } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0) && (cur_dialogue == 'houseoff')) {
+            telescope_off_check = true;
+            telescope_seen = true;
+            switch_dialogue('outro');
         } else {
             cur_dialogue_step += 1;
         }
     }
 
-    if ((house_off_check) && (telescope_off_check)) {
+    if ((telescope_off_check)) {
         return;
     }
 
