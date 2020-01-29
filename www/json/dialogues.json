@@ -7,7 +7,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "Ja, ich möchte nur nochmal kurzzu Opa und die Leylasterne sehen!"
+                "text": "Ja, ich möchte nur nochmal kurz zu Opa und die Leylasterne sehen!"
             },
             {
                 "role": "Mutter",
@@ -15,7 +15,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "ok, bis gleich!"
+                "text": "Ok, bis gleich!"
             }
         ],
         "grandpa": [
@@ -25,7 +25,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "ich habe mich extra mit dem Packen beeilt,"
+                "text": "Ich habe mich extra mit dem Packen beeilt,"
             },
             {
                 "role": "Leyla",
@@ -51,11 +51,11 @@
             },
             {
                 "role": "Mutter",
-                "text": " Steig ins Auto, dann geht es los."
+                "text": "Steig' ins Auto, dann geht es los."
             },
             {
                 "role": "Leyla",
-                "text": "ok."
+                "text": "Ok."
             }
         ]
     },
@@ -71,12 +71,12 @@
             },
             {
                 "role": "Leyla",
-                "text": "aber ich sehe immer weniger Sterne, je weiter wir fahren..."
+                "text": "Aber ich sehe immer weniger Sterne, je weiter wir fahren..."
             }
         ],
         "city": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "... jetzt sehe ich gar keine Sterne mehr!"
             }
         ]
@@ -84,35 +84,35 @@
     "chapter3": {
         "intro": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "So, die letzten Kartons sind ausgepackt,..."
             },
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "...mal sehen ob ich auch hier ein paar Sterne sehen kann,..."
             },
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "...,es ist ja schon ziemlich hell hier"
             }
         ],
         "midclue": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Hmm, nichts zu sehen, ich sollte wohl das Licht in meinem Zimmer ausmachen."
             }
         ],
         "outro": [
             {
-                "role": "leyla",
-                "text": "Nur ein Stern…  …ich muss wohl noch andere Lichter ausschalten."
+                "role": "Leyla",
+                "text": "Nur ein Stern...  ...ich muss wohl noch andere Lichter ausschalten."
             }
         ]
     },
     "chapter4": {
         "intro": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Mal sehen, ob ich hier was tun kann."
             }
         ],
@@ -123,11 +123,11 @@
             },
             {
                 "role": "Leyla",
-                "text": "Ja, aber leider habe sie selbst nicht so viel Spaß dabei,..."
+                "text": "Ja, aber leider haben sie selbst nicht so viel Spaß dabei,..."
             },
             {
                 "role": "Leyla",
-                "text": "...Sie sind im Bann des Lichts gefangen und können nicht entkommen."
+                "text": "...sie sind im Bann des Lichts gefangen und können nicht entkommen."
             },
             {
                 "role": "Fußgänger",
@@ -135,7 +135,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "mein Opa hat mir beigebracht so etwas zu reparieren, ich brauche nur einen Schraubenzieher"
+                "text": "Mein Opa hat mir beigebracht so etwas zu reparieren, ich brauche nur einen Schraubenzieher"
             },
             {
                 "role": "Fußgänger",
@@ -193,19 +193,11 @@
             },
             {
                 "role": "Leyla",
-                "text": "Ich habe eben Einen Schraubenzieher geschenkt bekommen, vielleicht kann ich ja helfen."
+                "text": "Ich habe eben einen Schraubenzieher geschenkt bekommen, vielleicht kann ich ja helfen."
             },
             {
                 "role": "Müde Frau",
                 "text": "Gerne, aber sei vorsichtig mit dem Strom!"
-            },
-            {
-                "role": "Müde Frau",
-                "text": "Danke, ich glaube jetzt kann ich besser schlafen."
-            },
-            {
-                "role": "Leyla",
-                "text": "Gerngeschehen gute Nacht!"
             },
             {
                 "role": "Leyla",
@@ -216,43 +208,51 @@
             {
                 "role": "Leyla",
                 "text": "Na also geht doch!"
+            },
+            {
+                "role": "Müde Frau",
+                "text": "Danke, ich glaube jetzt kann ich besser schlafen."
+            },
+            {
+                "role": "Leyla",
+                "text": "Gern geschehen, gute Nacht!"
             }
         ]
     },
     "chapter6": {
         "intro": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Hmmm, diese Lampe leuchtet ja mehr in den Himmel als auf den Boden."
             },
             {
-                "role": "leyla",
-                "text": "Schade, ich Bräuchte einen Schraubenschlüssel um an die Schwenkmechanik zu gelangen."
+                "role": "Leyla",
+                "text": "Schade, ich bräuchte einen Schraubenschlüssel um an die Schwenkmechanik zu gelangen."
             }
         ],
         "lamp2": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom schlafen ab."
             }
         ],
         "lamp3": [
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Diese Lampe beleuchtet nur den Weg und die Bank, wenigstens eine, die richtig eingestellt ist."
             },
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Juhu, ein Schraubenschlüssel, hoffen wir mal, dass er passt"
             },
             {
-                "role": "leyla",
+                "role": "Leyla",
                 "text": "Jetzt sieht es hier doch schon viel besser aus, weiter gehts!"
             }
         ]
     },
     "chapter7": {
-        "person2": [
+        "person1": [
             {
                 "role": "Leyla",
                 "text": "Hallo, was machen sie denn hier?"
@@ -282,7 +282,7 @@
                 "text": "Danke, bis bald!"
             }
         ],
-        "person1": [
+        "person2": [
             {
                 "role": "Leyla",
                 "text": "Hey, schauen sie auch nach den Sternen?"
@@ -327,7 +327,7 @@
             },
             {
                 "role": "Herr Hausmann",
-                "text": "Danke, ich werde sie direkt einbauen, ich werde auch schon ein bisschen Müde… gute Nacht."
+                "text": "Danke, ich werde sie direkt einbauen, ich werde auch schon ein bisschen Müde... gute Nacht."
             },
             {
                 "role": "Leyla",
