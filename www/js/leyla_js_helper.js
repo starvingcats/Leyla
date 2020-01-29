@@ -26,6 +26,7 @@ var fading = false;
 var car_mode = false;
 
 var block_move = false;
+var cur_text = '';
 
 function preload() {
     // loadJSON seems to lack {cache: false} option, so we fool browser not to
@@ -133,7 +134,12 @@ function create_ground() {
 function run_dialogue() {
 
     var cur_dialogue_list = dialogues[cur_dialogue];
-    var cur_text = cur_dialogue_list[cur_dialogue_step];
+    if (typeof cur_dialogue_list == 'undefined') {
+        block_move = false;
+        textbox_sp.visible = false;
+        return;
+    }
+    cur_text = cur_dialogue_list[cur_dialogue_step];
     if (cur_text) {
         block_move = true;
         textbox_sp.visible = true;

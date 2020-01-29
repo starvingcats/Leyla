@@ -60,7 +60,7 @@ function draw() {
         } else if ((gamechar_sp.overlap(person1_sp)) && (!person1_check) && (person2_check) && (cur_dialogue_step > 1)) {
             person1_check = true;
             switch_dialogue('person1');
-        } else if ((gamechar_sp.overlap(house_sp)) && (person1_check) && (person2_check) && (cur_dialogue_step > 1)) {
+        } else if ((gamechar_sp.overlap(house_sp)) && (person1_check) && (person2_check) && (cur_dialogue_step > 1) && (cur_dialogue != 'outro')) {
             house_check = true;
             house_sp.changeImage('warm');
             switch_dialogue('outro');

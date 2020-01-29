@@ -64,7 +64,7 @@ function draw() {
         if ((telescope_off_check)) {
             telescope_off_check = false;
             return;
-        } else if ((gamechar_sp.overlap(house_sp)) && (cur_dialogue_step > 0)) {
+        } else if ((gamechar_sp.overlap(house_sp)) && (cur_dialogue_step > 0) && (cur_dialogue != 'intro')) {
             house_sp.changeImage('off');
             house_off_check = true;
             switch_dialogue('houseoff');

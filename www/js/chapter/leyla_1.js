@@ -73,7 +73,7 @@ function draw() {
         }
         if ( (gamechar_sp.overlap(telescope_sp)) && (!telescope_seen) && (cur_dialogue != 'grandpa') ) {
             switch_dialogue('grandpa');
-        } else if ( (gamechar_sp.overlap(telescope_sp)) && (cur_dialogue == 'grandpa') ) {
+        } else if ( (gamechar_sp.overlap(telescope_sp)) && (cur_dialogue == 'grandpa') && (!cur_text) ) {
             telescope_off_check = true;
             telescope_seen = true;
             switch_dialogue('outro');

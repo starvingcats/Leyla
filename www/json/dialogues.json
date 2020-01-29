@@ -102,6 +102,12 @@
                 "text": "Hmm, nichts zu sehen, ich sollte wohl das Licht in meinem Zimmer ausmachen."
             }
         ],
+        "houseoff": [
+            {
+                "role": "Leyla",
+                "text": "Mal sehen, ob es jetzt besser ist."
+            }
+        ],
         "outro": [
             {
                 "role": "Leyla",
