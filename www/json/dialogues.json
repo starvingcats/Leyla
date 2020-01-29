@@ -1,360 +1,358 @@
 {
-  "chapter1": {
-    "intro": [
-      {
-        "role": "Mutter",
-        "text": "Wir fahren bald los, bist du bereit?"
-      },
-      {
-        "role": "Leyla",
-        "text": "Ja, ich möchte nur nochmal kurzzu Opa und die Leylasterne sehen!"
-      }
-    ],
-{
-        "role": "Mutter",
-        "text": "Ok, aber beeil dich!"
-      },
-{
-        "role": "Leyla",
-        "text": "ok, bis gleich!"
-      }
-
-    "grandpa": [
-      {
-        "role": "Opa",
-        "text": "Da bist du ja Leyla, ich habe schon auf dich gewartet."
-      },
-      {
-        "role": "Leyla",
-        "text": "ich habe mich extra mit dem Packen beeilt,"
-      }
-{
-        "role": "Leyla",
-        "text": "damit wir noch einmal die Sterne anschauen können."
-      }
- {
-        "role": "Opa",
-        "text": "Ich habe das Teleskop schon auf deine Sterne ausgerichtet, du kannst sie dir direkt ansehen."
-      },
-    ],
-    "outro": [
-      {
-        "role": "Mutter",
-        "text": "Leyla wir müssen los, kommst du?"
-      },
- {
-        "role": "Leyla",
-        "text": "Ja, sofort. Danke Opa und bis bald"
-      },
- {
-        "role": "Opa",
-        "text": "Bis bald kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier."
-      },
-      {
-        "role": "Mutter",
-        "text": " Steig ins Auto, dann geht es los."
-      },
-      {
-        "role": "Leyla",
-        "text": "ok."
-      }
-    ]
-  },
-  "chapter2": {
-    "intro": [
-      {
-        "role": "Leyla",
-        "text": "Ich bin schon ganz gespannt auf unser neues Haus"
-     {
-        "role": "Mutter",
-        "text": "Du wirst es mögen, wir haben dort mehr Platz und einen schönen Garten."
-      },
-
-{
-        "role": "Leyla",
-        "text": "aber ich sehe immer weniger Sterne, je weiter wir fahren..."
-      },
-    ],
-    "city": [
-      {
-        "role": "leyla",
-        "text": "... jetzt sehe ich gar keine Sterne mehr!"
-      }
-    ]
-  },
-  "chapter3": {
-    "intro": [
-      {
-        "role": "leyla",
-        "text": "So, die letzten Kartons sind ausgepackt,..."
-      }
-{
-        "role": "leyla",
-        "text": "...mal sehen ob ich auch hier ein paar Sterne sehen kann,..."
-      }
-{
-        "role": "leyla",
-        "text": "...,es ist ja schon ziemlich hell hier"
-      }
-    ],
-    "midclue": [
-      {
-        "role": "leyla",
-        "text": "Hmm, nichts zu sehen, ich sollte wohl das Licht in meinem Zimmer ausmachen."
-      }
-    ],
-    "outro": [
-      {
-        "role": "leyla",
-        "text": "Nur ein Stern…  …ich muss wohl noch andere Lichter ausschalten."
-      }
-    ]
-  },
-
-  "chapter4": {
-    "intro": [
-      {
-        "role": "leyla",
-        "text": "Mal sehen, ob ich hier was tun kann."
-      }
-    ],
-    "person": [
-      {
-        "role": "Fußgänger",
-        "text": "Siehst du die Motten da oben, ist es nicht schön wie sie um die Lampe kreisen?"
-      },
-      {
-        "role": "Leyla",
-        "text": "Ja, aber leider habe sie selbst nicht so viel Spaß dabei,..."
-      }
-   {
-        "role": "Leyla",
-        "text": "...Sie sind im Bann des Lichts gefangen und können nicht entkommen."
-      }
- {
-        "role": "Fußgänger",
-        "text": "Eigentlich hat diese Lampe eine Zeitschaltuhr, aber die ist schon länger kaputt."
-      }
-    ],
-   {
-        "role": "Leyla",
-        "text": "mein Opa hat mir beigebracht so etwas zu reparieren, ich brauche nur einen Schraubenzieher"
-      }
- {
-        "role": "Fußgänger",
-        "text": "Zwei Häuser weiter wohnt der Hausmeister der Straße, vielleicht kann er dir helfen."
-      }
-    ],
-    "janitor": [
-      {
-        "role": "Leyla",
-        "text": "Hey, bist du der Hausmeister?"
-      },
-      {
-        "role": "Hausmeister",
-        "text": "Ja, der bin ich, kann ich dir helfen?"
-      }
-    {
-        "role": "Leyla",
-        "text": "Ich brauche einen Schraubenzieher um die Lampe da drüben zu reparieren."
-      },
-      {
-        "role": "Hausmeister",
-        "text": "Hier, du kannst ihn behalten, falls du noch weitere Lampen findest, aber sei vorsichtig!"
-      }],
-    "outro": [
-  {
-        "role": "Leyla",
-        "text": "So, jetzt können die Motten weiterfliegen."
-      },
-  {
-        "role": "Fußgänger",
-        "text": "Toll, danke!"
-      },
-    ],
-
-
-  },
-  "chapter5": {
-    "intro": [
-      {
-        "role": "Leyla",
-        "text": "Ein bisschen dunkler ist es schon geworden, aber ich glaube das reicht noch nicht."
-      }
-    ],
-    "person": [
-      {
-        "role": "Leyla",
-        "text": "Guten Abend, geht es ihnen gut? Sie sehen so müde aus."
-      },
-      {
-        "role": "Müde Frau",
-        "text": "Ja, aber leider leuchten diese Lampen die ganze Nacht in mein Zimmer und ich habe keine Rollläden."
-      }
-  {
-        "role": "Müde Frau",
-        "text": "Ich würde die Lampen ja ausmachen aber ich habe nicht das passende Werkzeug."
-      }
-      {
-        "role": "Leyla",
-        "text": "Ich habe eben Einen Schraubenzieher geschenkt bekommen, vielleicht kann ich ja helfen."
-      },
-      {
-        "role": "Müde Frau",
-        "text": "Gerne, aber sei vorsichtig mit dem Strom!"
-      }
-   {
-        "role": "Müde Frau",
-        "text": "Danke, ich glaube jetzt kann ich besser schlafen."
-      }
- {
-        "role": "Leyla",
-        "text": "Gerngeschehen gute Nacht!"
-      }
-  {
-        "role": "Leyla",
-        "text": "Hmm,  diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?"
-      }
-    ],
-    "outro": [
-      {
-        "role": "Leyla",
-        "text": "Na also geht doch!"
-      }
-    ]
-  },
-  "chapter6": {
-    "intro": [
-      {
-        "role": "leyla",
-        "text": "Hmmm, diese Lampe leuchtet ja mehr in den Himmel als auf den Boden."
-      }
-   {
-        "role": "leyla",
-        "text": "Schade, ich Bräuchte einen Schraubenschlüssel um an die Schwenkmechanik zu gelangen."
-      }
-    ],
-    "lamp2": [
-      {
-        "role": "leyla",
-        "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom schlafen ab."
-      }
-    ]
- "lamp3": [
-      {
-        "role": "leyla",
-        "text": "Diese Lampe beleuchtet nur den Weg und die Bank, wenigstens eine, die richtig eingestellt ist."
-      }
-  {
-        "role": "leyla",
-        "text": "Juhu, ein Schraubenschlüssel, hoffen wir mal, dass er passt"
-      }
-  {
-        "role": "leyla",
-        "text": "Jetzt sieht es hier doch schon viel besser aus, weiter gehts!"
-      }
-    ]
-  },
-  "chapter7": {
-    "person2": [
-      {
-        "role": "Leyla",
-        "text": "Hallo, was machen sie denn hier?"
-      },
-      {
-        "role": "Sternebeobachter",
-        "text": "Ich habe gerade einen Film über die Sterne gesehen und dachte mir, ich schaue mal..."
-      }
-      {
-        "role": "Sternebeobachter",
-        "text": "...ob ich sie auch in echt sehen kann, aber leider sieht man nicht so viele wie im Film."
-      }
-      {
-        "role": "Leyla",
-        "text": "Das stimmt, seit ich in der Stadt wohne, kann ich meine Lieblingssterne auch nicht mehr sehen."
-      }
-      {
-        "role": "Leyla",
-        "text": "Ich versuche gerade die Stadt dunkler zu machen, damit sie wieder sichtbar werden."
-      }
-      {
-        "role": "Sternebeobachter",
-        "text": "Das klingt spannend, viel Erfolg dabei."
-      }
-      {
-        "role": "Leyla",
-        "text": "Danke, bis bald!"
-      }
-    ],
-    "person1": [
-      {
-        "role": "Leyla",
-        "text": "Hey, schauen sie auch nach den Sternen?"
-      }
-      {
-        "role": "Herr Bergmann",
-        "text": "Ja, das mache ich immer, weil ich Abends sonst nicht müde werde, und sonst nichts hilft."
-      }  {
-          "role": "Leyla",
-          "text": "Vielleicht sollten sie mal wärmeres Licht probieren, blaues Licht kann beim müdewerden stören."
-        },
-      {
-        "role": "Herr Bergmann",
-        "text": "Gute Idee, aber wo soll ich jetzt noch neue Glühbirnen herbekommen?"
-      }
-      {
-        "role": "Leyla",
-        "text": "Bei ihrem Nachbarn war das Licht sehr warm, vielleicht hat er ja noch Ersatzglühbirnen."
-      }
-      {
-        "role": "Leyla",
-        "text": "Haben sie eventuell ein paar Glühbirnen übrig, ihr Nachbar könnte welche gebrauchen."
-      }
-      {
-        "role": "Sternenbeobachter",
-        "text": "Da hast du ja Glück, ich habe gerade gestern noch neue geholt."
-      }
-      {
-        "role": "Sternenbeobachter",
-        "text": "Leider musste ich lange suchen, weil der Baumarkt fast nur grellblaue Lampen hat"
-      }
-      {
-        "role": "Sternenbeobachter",
-        "text": "Hier hast du jedenfalls die Glühbirnen. Grüß Herrn Bergmann von mir"
-      }
-    ],
-    "outro": [
-      {
-        "role": "Leyla",
-        "text": "Hier, ich habe ein paar Glühbirnen bekommen und soll auch vom Nachbarn grüßen!"
-      }
-      {
-        "role": "Herr Bergmann",
-        "text": "Danke, ich werde sie direkt einbauen, ich werde auch schon ein bisschen Müde… gute Nacht."
-      }
-      {
-        "role": "Leyla",
-        "text": "Gute Nacht."
-      }
-    ]
-  },
-  "chapter8": {
-    "intro": [
-      {
-        "role": "Leyla",
-        "text": "Kein Wunder, das ich keine Sterne sehen konnte, "
-      }
-      {
-        "role": "Leyla",
-        "text": "diese Strahler hier beleuchten ja nicht nur die Werbung, sondern auch noch den ganzen Himmel,"
-      }  {
-          "role": "Leyla",
-          "text": "mal sehen, ob ich sie mit meinem Werkzeug ausschalten kann."
-        }  {
-            "role": "Leyla",
-            "text": "Das sieht schon besser aus, und da ist auch eine Bushaltestelle, vielleicht fährt noch ein Bus nach Hause.
-"
-          }
-    ]
-  }
+    "chapter1": {
+        "intro": [
+            {
+                "role": "Mutter",
+                "text": "Wir fahren bald los, bist du bereit?"
+            },
+            {
+                "role": "Leyla",
+                "text": "Ja, ich möchte nur nochmal kurzzu Opa und die Leylasterne sehen!"
+            },
+            {
+                "role": "Mutter",
+                "text": "Ok, aber beeil dich!"
+            },
+            {
+                "role": "Leyla",
+                "text": "ok, bis gleich!"
+            }
+        ],
+        "grandpa": [
+            {
+                "role": "Opa",
+                "text": "Da bist du ja Leyla, ich habe schon auf dich gewartet."
+            },
+            {
+                "role": "Leyla",
+                "text": "ich habe mich extra mit dem Packen beeilt,"
+            },
+            {
+                "role": "Leyla",
+                "text": "damit wir noch einmal die Sterne anschauen können."
+            },
+            {
+                "role": "Opa",
+                "text": "Ich habe das Teleskop schon auf deine Sterne ausgerichtet, du kannst sie dir direkt ansehen."
+            }
+        ],
+        "outro": [
+            {
+                "role": "Mutter",
+                "text": "Leyla wir müssen los, kommst du?"
+            },
+            {
+                "role": "Leyla",
+                "text": "Ja, sofort. Danke Opa und bis bald"
+            },
+            {
+                "role": "Opa",
+                "text": "Bis bald kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier."
+            },
+            {
+                "role": "Mutter",
+                "text": " Steig ins Auto, dann geht es los."
+            },
+            {
+                "role": "Leyla",
+                "text": "ok."
+            }
+        ]
+    },
+    "chapter2": {
+        "intro": [
+            {
+                "role": "Leyla",
+                "text": "Ich bin schon ganz gespannt auf unser neues Haus"
+            },
+            {
+                "role": "Mutter",
+                "text": "Du wirst es mögen, wir haben dort mehr Platz und einen schönen Garten."
+            },
+            {
+                "role": "Leyla",
+                "text": "aber ich sehe immer weniger Sterne, je weiter wir fahren..."
+            }
+        ],
+        "city": [
+            {
+                "role": "leyla",
+                "text": "... jetzt sehe ich gar keine Sterne mehr!"
+            }
+        ]
+    },
+    "chapter3": {
+        "intro": [
+            {
+                "role": "leyla",
+                "text": "So, die letzten Kartons sind ausgepackt,..."
+            },
+            {
+                "role": "leyla",
+                "text": "...mal sehen ob ich auch hier ein paar Sterne sehen kann,..."
+            },
+            {
+                "role": "leyla",
+                "text": "...,es ist ja schon ziemlich hell hier"
+            }
+        ],
+        "midclue": [
+            {
+                "role": "leyla",
+                "text": "Hmm, nichts zu sehen, ich sollte wohl das Licht in meinem Zimmer ausmachen."
+            }
+        ],
+        "outro": [
+            {
+                "role": "leyla",
+                "text": "Nur ein Stern…  …ich muss wohl noch andere Lichter ausschalten."
+            }
+        ]
+    },
+    "chapter4": {
+        "intro": [
+            {
+                "role": "leyla",
+                "text": "Mal sehen, ob ich hier was tun kann."
+            }
+        ],
+        "person": [
+            {
+                "role": "Fußgänger",
+                "text": "Siehst du die Motten da oben, ist es nicht schön wie sie um die Lampe kreisen?"
+            },
+            {
+                "role": "Leyla",
+                "text": "Ja, aber leider habe sie selbst nicht so viel Spaß dabei,..."
+            },
+            {
+                "role": "Leyla",
+                "text": "...Sie sind im Bann des Lichts gefangen und können nicht entkommen."
+            },
+            {
+                "role": "Fußgänger",
+                "text": "Eigentlich hat diese Lampe eine Zeitschaltuhr, aber die ist schon länger kaputt."
+            },
+            {
+                "role": "Leyla",
+                "text": "mein Opa hat mir beigebracht so etwas zu reparieren, ich brauche nur einen Schraubenzieher"
+            },
+            {
+                "role": "Fußgänger",
+                "text": "Zwei Häuser weiter wohnt der Hausmeister der Straße, vielleicht kann er dir helfen."
+            }
+        ],
+        "janitor": [
+            {
+                "role": "Leyla",
+                "text": "Hey, bist du der Hausmeister?"
+            },
+            {
+                "role": "Hausmeister",
+                "text": "Ja, der bin ich, kann ich dir helfen?"
+            },
+            {
+                "role": "Leyla",
+                "text": "Ich brauche einen Schraubenzieher um die Lampe da drüben zu reparieren."
+            },
+            {
+                "role": "Hausmeister",
+                "text": "Hier, du kannst ihn behalten, falls du noch weitere Lampen findest, aber sei vorsichtig!"
+            }
+        ],
+        "outro": [
+            {
+                "role": "Leyla",
+                "text": "So, jetzt können die Motten weiterfliegen."
+            },
+            {
+                "role": "Fußgänger",
+                "text": "Toll, danke!"
+            }
+        ]
+    },
+    "chapter5": {
+        "intro": [
+            {
+                "role": "Leyla",
+                "text": "Ein bisschen dunkler ist es schon geworden, aber ich glaube das reicht noch nicht."
+            }
+        ],
+        "person": [
+            {
+                "role": "Leyla",
+                "text": "Guten Abend, geht es ihnen gut? Sie sehen so müde aus."
+            },
+            {
+                "role": "Müde Frau",
+                "text": "Ja, aber leider leuchten diese Lampen die ganze Nacht in mein Zimmer und ich habe keine Rollläden."
+            },
+            {
+                "role": "Müde Frau",
+                "text": "Ich würde die Lampen ja ausmachen aber ich habe nicht das passende Werkzeug."
+            },
+            {
+                "role": "Leyla",
+                "text": "Ich habe eben Einen Schraubenzieher geschenkt bekommen, vielleicht kann ich ja helfen."
+            },
+            {
+                "role": "Müde Frau",
+                "text": "Gerne, aber sei vorsichtig mit dem Strom!"
+            },
+            {
+                "role": "Müde Frau",
+                "text": "Danke, ich glaube jetzt kann ich besser schlafen."
+            },
+            {
+                "role": "Leyla",
+                "text": "Gerngeschehen gute Nacht!"
+            },
+            {
+                "role": "Leyla",
+                "text": "Hmm,  diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?"
+            }
+        ],
+        "outro": [
+            {
+                "role": "Leyla",
+                "text": "Na also geht doch!"
+            }
+        ]
+    },
+    "chapter6": {
+        "intro": [
+            {
+                "role": "leyla",
+                "text": "Hmmm, diese Lampe leuchtet ja mehr in den Himmel als auf den Boden."
+            },
+            {
+                "role": "leyla",
+                "text": "Schade, ich Bräuchte einen Schraubenschlüssel um an die Schwenkmechanik zu gelangen."
+            }
+        ],
+        "lamp2": [
+            {
+                "role": "leyla",
+                "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom schlafen ab."
+            }
+        ],
+        "lamp3": [
+            {
+                "role": "leyla",
+                "text": "Diese Lampe beleuchtet nur den Weg und die Bank, wenigstens eine, die richtig eingestellt ist."
+            },
+            {
+                "role": "leyla",
+                "text": "Juhu, ein Schraubenschlüssel, hoffen wir mal, dass er passt"
+            },
+            {
+                "role": "leyla",
+                "text": "Jetzt sieht es hier doch schon viel besser aus, weiter gehts!"
+            }
+        ]
+    },
+    "chapter7": {
+        "person2": [
+            {
+                "role": "Leyla",
+                "text": "Hallo, was machen sie denn hier?"
+            },
+            {
+                "role": "Sternebeobachter",
+                "text": "Ich habe gerade einen Film über die Sterne gesehen und dachte mir, ich schaue mal..."
+            },
+            {
+                "role": "Sternebeobachter",
+                "text": "...ob ich sie auch in echt sehen kann, aber leider sieht man nicht so viele wie im Film."
+            },
+            {
+                "role": "Leyla",
+                "text": "Das stimmt, seit ich in der Stadt wohne, kann ich meine Lieblingssterne auch nicht mehr sehen."
+            },
+            {
+                "role": "Leyla",
+                "text": "Ich versuche gerade die Stadt dunkler zu machen, damit sie wieder sichtbar werden."
+            },
+            {
+                "role": "Sternebeobachter",
+                "text": "Das klingt spannend, viel Erfolg dabei."
+            },
+            {
+                "role": "Leyla",
+                "text": "Danke, bis bald!"
+            }
+        ],
+        "person1": [
+            {
+                "role": "Leyla",
+                "text": "Hey, schauen sie auch nach den Sternen?"
+            },
+            {
+                "role": "Herr Hausmann",
+                "text": "Ja, das mache ich immer, weil ich Abends sonst nicht müde werde, und sonst nichts hilft."
+            },
+            {
+                "role": "Leyla",
+                "text": "Vielleicht sollten sie mal wärmeres Licht probieren, blaues Licht kann beim müdewerden stören."
+            },
+            {
+                "role": "Herr Hausmann",
+                "text": "Gute Idee, aber wo soll ich jetzt noch neue Glühbirnen herbekommen?"
+            },
+            {
+                "role": "Leyla",
+                "text": "Bei ihrem Nachbarn war das Licht sehr warm, vielleicht hat er ja noch Ersatzglühbirnen."
+            },
+            {
+                "role": "Leyla",
+                "text": "Haben sie eventuell ein paar Glühbirnen übrig, ihr Nachbar könnte welche gebrauchen."
+            },
+            {
+                "role": "Sternenbeobachter",
+                "text": "Da hast du ja Glück, ich habe gerade gestern noch neue geholt."
+            },
+            {
+                "role": "Sternenbeobachter",
+                "text": "Leider musste ich lange suchen, weil der Baumarkt fast nur grellblaue Lampen hat"
+            },
+            {
+                "role": "Sternenbeobachter",
+                "text": "Hier hast du jedenfalls die Glühbirnen. Grüß Herrn Hausmann von mir"
+            }
+        ],
+        "outro": [
+            {
+                "role": "Leyla",
+                "text": "Hier, ich habe ein paar Glühbirnen bekommen und soll auch vom Nachbarn grüßen!"
+            },
+            {
+                "role": "Herr Hausmann",
+                "text": "Danke, ich werde sie direkt einbauen, ich werde auch schon ein bisschen Müde… gute Nacht."
+            },
+            {
+                "role": "Leyla",
+                "text": "Gute Nacht."
+            }
+        ]
+    },
+    "chapter8": {
+        "intro": [
+            {
+                "role": "Leyla",
+                "text": "Kein Wunder, das ich keine Sterne sehen konnte, "
+            },
+            {
+                "role": "Leyla",
+                "text": "diese Strahler hier beleuchten ja nicht nur die Werbung, sondern auch noch den ganzen Himmel,"
+            },
+            {
+                "role": "Leyla",
+                "text": "mal sehen, ob ich sie mit meinem Werkzeug ausschalten kann."
+            },
+            {
+                "role": "Leyla",
+                "text": "Das sieht schon besser aus, und da ist auch eine Bushaltestelle, vielleicht fährt noch ein Bus nach Hause."
+            }
+        ]
+    }
 }
