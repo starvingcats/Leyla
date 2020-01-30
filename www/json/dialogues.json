@@ -360,5 +360,19 @@
                 "text": "Das sieht schon besser aus, und da ist auch eine Bushaltestelle, vielleicht fährt noch ein Bus nach Hause."
             }
         ]
+    },
+    "chapter9": {
+        "intro": [
+            {
+                "role": "Leyla",
+                "text": "foo"
+            }
+        ],
+        "outro": [
+            {
+                "role": "Leyla",
+                "text": "bar"
+            }
+        ]
     }
 }

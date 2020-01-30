@@ -135,7 +135,7 @@ function draw() {
         bus_sp.velocity.x = -5;
         wait(3 * 1000).then(function() {
             bus_sp.velocity.x = 0;
-            transition('end.html');
+            transition('chapter9.html');
         });
     }
 
