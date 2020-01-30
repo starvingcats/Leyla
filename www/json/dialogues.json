@@ -246,11 +246,15 @@
             {
                 "role": "Leyla",
                 "text": "Diese Lampe beleuchtet nur den Weg und die Bank, wenigstens eine, die richtig eingestellt ist."
-            },
+            }
+        ],
+        "wrench": [
             {
                 "role": "Leyla",
                 "text": "Juhu, ein Schraubenschlüssel, hoffen wir mal, dass er passt"
-            },
+            }
+        ],
+        "outro": [
             {
                 "role": "Leyla",
                 "text": "Jetzt sieht es hier doch schon viel besser aus, weiter gehts!"

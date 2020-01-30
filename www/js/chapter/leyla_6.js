@@ -14,6 +14,11 @@ var wrench_sp;
 var wrench_img;
 var wrench_check = false;
 
+var dl2_done = false;
+var dl3_done = false;
+var dw_done = false;
+var od_done = false;
+
 function setup() {
 
     dialogues = dialogues_raw.chapter6;
@@ -79,8 +84,24 @@ function draw() {
         };
     }
 
-    if ((gamechar_sp.position.x > 2 * SCENE_W) && (cur_dialogue != 'lamp2') && (!lamp_1_check) && (!lamp_2_check)) {
+    if ((gamechar_sp.position.x > 2 * SCENE_W) && (!dl2_done) && (cur_dialogue != 'lamp2') && (!lamp_1_check) && (!lamp_2_check)) {
         switch_dialogue('lamp2');
+        dl2_done = true;
+    }
+
+    if ((gamechar_sp.position.x > 3.2 * SCENE_W) && (!dl3_done) && (cur_dialogue != 'lamp3') && (!lamp_1_check) && (!lamp_2_check)) {
+        switch_dialogue('lamp3');
+        dl3_done = true;
+    }
+
+    if ((gamechar_sp.position.x > 3.8 * SCENE_W) && (!dw_done) && (cur_dialogue != 'wrench') && (!lamp_1_check) && (!lamp_2_check)) {
+        switch_dialogue('wrench');
+        dw_done = true;
+    }
+
+    if ((lamp_1_check) && (lamp_2_check) && (!od_done)) {
+        od_done = true;
+        switch_dialogue('outro');
     }
 
     if ((lamp_1_check) && (lamp_2_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
