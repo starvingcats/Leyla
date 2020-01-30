@@ -1,5 +1,6 @@
 var GRAVITY = 1;
 var JUMP = 11;
+var CHAR_SPEED = 10;
 
 var SCENE_W = 1280;
 var SCENE_H = 720;
@@ -65,7 +66,7 @@ function basic_movement() {
         }
     }
     if (keyWentDown('a')) {
-        gamechar_sp.velocity.x = -10;
+        gamechar_sp.velocity.x = -CHAR_SPEED;
         if (!car_mode) {
             gamechar_sp.mirrorX(-1);
         }
@@ -78,7 +79,7 @@ function basic_movement() {
     }
 
     if (keyWentDown('d')) {
-        gamechar_sp.velocity.x = 10;
+        gamechar_sp.velocity.x = CHAR_SPEED;
     }
     if (keyWentUp('d')) {
         gamechar_sp.velocity.x = 0;

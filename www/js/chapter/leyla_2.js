@@ -14,6 +14,7 @@ function setup() {
 
     createCanvas(SCENE_W, SCENE_H);
     SCENE_RBOUND = 3000;
+    CHAR_SPEED = 6;
 
     create_ground();
     background_img = loadImage('img/lvl2_background.png');
