@@ -40,6 +40,7 @@ function setup() {
     house_off_img = loadImage('img/lvl3_house_off.png');
     house_sp.addImage('on', house_on_img);
     house_sp.addImage('off', house_off_img);
+    house_sp.mirrorX(-1);
 
     telescope_sp = createSprite(800, SCENE_GROUND - 60);
     telescope_img = loadImage('img/telescope.png');
@@ -47,7 +48,7 @@ function setup() {
 
     create_ground();
     create_textbox();
-    create_gamechar();
+    create_gamechar(200);
 
 }
 
@@ -65,9 +66,21 @@ function draw() {
             telescope_off_check = false;
             return;
         } else if ((gamechar_sp.overlap(house_sp)) && (cur_dialogue_step > 0) && (cur_dialogue != 'intro')) {
-            house_sp.changeImage('off');
-            house_off_check = true;
-            switch_dialogue('houseoff');
+            wait(0.5 * 1000).then(function() {
+                gamechar_sp.visible = false;
+                block_move = true;
+            });
+
+            wait(2 * 1000).then(function() {
+                house_sp.changeImage('off');
+                house_off_check = true;
+            });
+
+            wait(3 * 1000).then(function() {
+                switch_dialogue('houseoff');
+                gamechar_sp.visible = true;
+                block_move = false;
+            });
         } else if ((gamechar_sp.overlap(telescope_sp)) && (cur_dialogue_step > 0) && (cur_dialogue != 'midclue')  && (cur_dialogue != 'houseoff')) {
             telescope_off_check = true;
             switch_dialogue('midclue');

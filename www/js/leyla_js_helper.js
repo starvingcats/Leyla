@@ -6,6 +6,7 @@ var SCENE_W = 1280;
 var SCENE_H = 720;
 var SCENE_GROUND = SCENE_H - 10;
 var SCENE_RBOUND = SCENE_W - 20;
+var SCENE_LBOUND = 20;
 
 var cur_dialogue = 'intro';
 var cur_dialogue_step = 0;
@@ -92,7 +93,7 @@ function check_scene_bounds() {
         if (gamechar_sp.velocity.x > 0) {
             gamechar_sp.velocity.x = 0;
         }
-    } else if (gamechar_sp.position.x < 20) {
+    } else if (gamechar_sp.position.x < SCENE_LBOUND) {
         if (gamechar_sp.velocity.x < 0) {
             gamechar_sp.velocity.x = 0;
         }
