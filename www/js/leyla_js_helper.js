@@ -146,7 +146,7 @@ function run_dialogue() {
         block_move = true;
         textbox_sp.visible = true;
         var display_text = cur_text.role + ': ' + cur_text.text;
-        fill('black');
+        fill('white');
         textSize(SCENE_H / 40);
         textAlign(CENTER, CENTER);
         if (has_camera) {
