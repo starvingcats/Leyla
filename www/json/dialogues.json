@@ -289,6 +289,22 @@
             },
             {
                 "role": "Leyla",
+                "text": "Haben sie eventuell ein paar Glühbirnen übrig, ihr Nachbar könnte welche gebrauchen."
+            },
+            {
+                "role": "Sternenbeobachter",
+                "text": "Da hast du ja Glück, ich habe gerade gestern noch neue geholt."
+            },
+            {
+                "role": "Sternenbeobachter",
+                "text": "Leider musste ich lange suchen, weil der Baumarkt fast nur grellblaue Lampen hat"
+            },
+            {
+                "role": "Sternenbeobachter",
+                "text": "Hier hast du jedenfalls die Glühbirnen. Grüß Herrn Hausmann von mir"
+            },
+            {
+                "role": "Leyla",
                 "text": "Danke, bis bald!"
             }
         ],
@@ -312,22 +328,6 @@
             {
                 "role": "Leyla",
                 "text": "Bei ihrem Nachbarn war das Licht sehr warm, vielleicht hat er ja noch Ersatzglühbirnen."
-            },
-            {
-                "role": "Leyla",
-                "text": "Haben sie eventuell ein paar Glühbirnen übrig, ihr Nachbar könnte welche gebrauchen."
-            },
-            {
-                "role": "Sternenbeobachter",
-                "text": "Da hast du ja Glück, ich habe gerade gestern noch neue geholt."
-            },
-            {
-                "role": "Sternenbeobachter",
-                "text": "Leider musste ich lange suchen, weil der Baumarkt fast nur grellblaue Lampen hat"
-            },
-            {
-                "role": "Sternenbeobachter",
-                "text": "Hier hast du jedenfalls die Glühbirnen. Grüß Herrn Hausmann von mir"
             }
         ],
         "outro": [
@@ -337,7 +337,7 @@
             },
             {
                 "role": "Herr Hausmann",
-                "text": "Danke, ich werde sie direkt einbauen, ich werde auch schon ein bisschen Müde... gute Nacht."
+                "text": "Danke, ich habe sie direkt eingebaut, ich werde auch schon ein bisschen Müde... gute Nacht."
             },
             {
                 "role": "Leyla",
