@@ -369,13 +369,13 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "Mal sehen, ob ich jetzt meine Sterne sehen kann"
+                "text": "So, jetzt sollte es dunkel genug sein, mal sehen, ob ich jetzt meine Sterne wieder sehen kann"
             }
         ],
         "outro": [
             {
                 "role": "Leyla",
-                "text": "Juhu, da sind die Leyla-Sterne!"
+                "text": "Juhu, ich kann das kleine L wieder sehen!"
             }
         ]
     }
