@@ -42,7 +42,7 @@ function setup() {
 
     telescope_stars_img = loadImage('img/lvl1_telescopeview.png');
 
-    telescope_sp = createSprite(100, SCENE_H - 80);
+    telescope_sp = createSprite(160, SCENE_H - 80);
     telescope_img = loadImage('img/telescope.png');
     telescope_sp.addImage(telescope_img);
 
@@ -76,7 +76,6 @@ function draw() {
         } else if ( (gamechar_sp.overlap(telescope_sp)) && (cur_dialogue == 'grandpa') && (!cur_text) ) {
             telescope_off_check = true;
             telescope_seen = true;
-            switch_dialogue('outro');
         } else {
             cur_dialogue_step += 1;
         }
@@ -84,6 +83,10 @@ function draw() {
 
     if (telescope_off_check) {
         return;
+    }
+
+    if ((cur_dialogue != 'outro') && (telescope_seen) && (gamechar_sp.position.x > SCENE_RBOUND - 300)) {
+        switch_dialogue('outro');
     }
 
     apply_gravity();
