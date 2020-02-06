@@ -61,28 +61,28 @@ function basic_movement() {
         return;
     }
 
-    if (keyWentDown('space')) {
+    if (keyWentDown('space') || keyWentDown(38)) {
         if (gamechar_sp.onground) {
             gamechar_sp.velocity.y = -JUMP;
         }
     }
-    if (keyWentDown('a')) {
+    if (keyWentDown('a') || keyWentDown(37)) {
         gamechar_sp.velocity.x = -CHAR_SPEED;
         if (!car_mode) {
             gamechar_sp.mirrorX(-1);
         }
     }
-    if (keyWentUp('a')) {
+    if (keyWentUp('a') || keyWentUp(37)) {
         gamechar_sp.velocity.x = 0;
         if (!car_mode) {
             gamechar_sp.mirrorX(1);
         }
     }
 
-    if (keyWentDown('d')) {
+    if (keyWentDown('d') || keyWentDown(39)) {
         gamechar_sp.velocity.x = CHAR_SPEED;
     }
-    if (keyWentUp('d')) {
+    if (keyWentUp('d') || keyWentUp(39)) {
         gamechar_sp.velocity.x = 0;
     }
 
@@ -124,7 +124,8 @@ function create_gamechar(position_x) {
 
 function create_textbox() {
     textbox_img = loadImage('img/textbox_small.png');
-    textbox_sp = createSprite(SCENE_W/2, SCENE_H / 15);
+    //textbox_sp = createSprite(SCENE_W/2, SCENE_H / 15);
+    textbox_sp = createSprite(SCENE_W/2, SCENE_H - 40);
     textbox_sp.addImage(textbox_img);
 }
 
@@ -152,7 +153,8 @@ function run_dialogue() {
         if (has_camera) {
             textbox_sp.velocity.x = gamechar_sp.velocity.x;
             textbox_sp.position.x = gamechar_sp.position.x;
-            text(display_text, gamechar_sp.position.x, 50);
+            //text(display_text, gamechar_sp.position.x, 50);
+            text(display_text, gamechar_sp.position.x, SCENE_H - 30);
         } else {
             text(display_text, SCENE_W/2, 50);
         }

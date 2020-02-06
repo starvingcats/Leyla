@@ -67,7 +67,7 @@ function draw() {
     basic_movement();
     focus_gamechar();
 
-    if (keyWentDown('f')) {
+    if (keyWentDown('f') || keyWentDown(40)) {
         if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
             switch_dialogue('person');
             person_check = true;

@@ -14,6 +14,8 @@ var wrench_sp;
 var wrench_img;
 var wrench_check = false;
 
+
+var dl1_done = false;
 var dl2_done = false;
 var dl3_done = false;
 var dw_done = false;
@@ -69,7 +71,7 @@ function draw() {
     basic_movement();
     focus_gamechar();
 
-    if (keyWentDown('f')) {
+    if (keyWentDown('f') || keyWentDown(40)) {
         if ((gamechar_sp.overlap(lamp1_sp)) && (wrench_check) && (cur_dialogue_step > 1)) {
             lamp1_sp.changeImage('even');
             lamp_1_check = true;
@@ -82,6 +84,11 @@ function draw() {
         } else {
             cur_dialogue_step += 1;
         };
+    }
+
+    if ((gamechar_sp.position.x > SCENE_W - 200) && (!dl1_done) && (cur_dialogue != 'lamp1') && (!lamp_1_check) && (!lamp_2_check)) {
+        switch_dialogue('lamp1');
+        dl1_done = true;
     }
 
     if ((gamechar_sp.position.x > 2 * SCENE_W) && (!dl2_done) && (cur_dialogue != 'lamp2') && (!lamp_1_check) && (!lamp_2_check)) {

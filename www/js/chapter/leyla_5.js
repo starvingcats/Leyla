@@ -27,6 +27,8 @@ var person_img;
 
 var person_check = false;
 var done_check = false;
+var kiosk_check = false;
+var cafe_check = false;
 
 function setup() {
 
@@ -79,7 +81,7 @@ function draw() {
     basic_movement();
     focus_gamechar();
 
-    if (keyWentDown('f')) {
+    if (keyWentDown('f') || keyWentDown(40)) {
         if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
             switch_dialogue('person');
             person_check = true;
@@ -98,9 +100,20 @@ function draw() {
 
     }
 
+    if ( (kioskspot_1_check) && (kioskspot_2_check) && (person_check) && (!done_check) && (!kiosk_check)) {
+        switch_dialogue('personthx');
+        kiosk_check = true;
+    }
+
+
     if ( (kioskspot_1_check) && (kioskspot_2_check) && (cafespot_check) && (!done_check)) {
         switch_dialogue('outro');
         done_check = true;
+    }
+
+    if ( (gamechar_sp.position.x > SCENE_RBOUND - 1000) && (kiosk_check) && (!cafe_check)) {
+        switch_dialogue('cafe');
+        cafe_check = true;
     }
 
     if ( (gamechar_sp.position.x > SCENE_RBOUND) && (done_check) ) {

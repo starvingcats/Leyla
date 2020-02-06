@@ -34,8 +34,6 @@ function setup() {
     background_sp.addImage(background_img);
     SCENE_RBOUND = 950;
 
-    create_textbox();
-
     midground_img = loadImage('img/lvl1_midground.png');
     midground_sp = createSprite(0, SCENE_H - 270);
     midground_sp.addImage(midground_img);
@@ -59,6 +57,7 @@ function setup() {
     mother_sp.addImage(mother_img);
 
     create_gamechar(SCENE_W - 450);
+    create_textbox();
 }
 
 function draw() {
@@ -71,9 +70,10 @@ function draw() {
             telescope_off_check = false;
             return;
         }
-        if ( (gamechar_sp.overlap(telescope_sp)) && (!telescope_seen) && (cur_dialogue != 'grandpa') ) {
+        if ( (gamechar_sp.overlap(grandpa_sp)) && (!telescope_seen) && (cur_dialogue != 'grandpa') ) {
             switch_dialogue('grandpa');
         } else if ( (gamechar_sp.overlap(telescope_sp)) && (cur_dialogue == 'grandpa') && (!cur_text) ) {
+            switch_dialogue('byegrandpa');
             telescope_off_check = true;
             telescope_seen = true;
         } else {

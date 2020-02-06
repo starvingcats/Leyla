@@ -36,7 +36,7 @@
                 "text": "Ich habe das Teleskop schon auf deine Sterne ausgerichtet, du kannst sie dir direkt ansehen."
             }
         ],
-        "outro": [
+        "byegrandpa": [
             {
                 "role": "Mutter",
                 "text": "Leyla wir müssen los, kommst du?"
@@ -48,7 +48,9 @@
             {
                 "role": "Opa",
                 "text": "Bis bald kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier."
-            },
+            }
+        ],
+        "outro": [
             {
                 "role": "Mutter",
                 "text": "Steig' ins Auto, dann geht es los."
@@ -204,7 +206,19 @@
             {
                 "role": "Müde Frau",
                 "text": "Gerne, aber sei vorsichtig mit dem Strom!"
+            }
+        ],
+        "personthx": [
+            {
+                "role": "Müde Frau",
+                "text": "Danke, ich glaube jetzt kann ich besser schlafen."
             },
+            {
+                "role": "Leyla",
+                "text": "Gern geschehen, gute Nacht!"
+            }
+        ],
+        "cafe": [
             {
                 "role": "Leyla",
                 "text": "Hmm,  diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?"
@@ -214,19 +228,13 @@
             {
                 "role": "Leyla",
                 "text": "Na also geht doch!"
-            },
-            {
-                "role": "Müde Frau",
-                "text": "Danke, ich glaube jetzt kann ich besser schlafen."
-            },
-            {
-                "role": "Leyla",
-                "text": "Gern geschehen, gute Nacht!"
             }
         ]
     },
     "chapter6": {
         "intro": [
+        ],
+        "lamp1": [
             {
                 "role": "Leyla",
                 "text": "Hmmm, diese Lampe leuchtet ja mehr in den Himmel als auf den Boden."
@@ -286,7 +294,9 @@
             {
                 "role": "Sternebeobachter",
                 "text": "Das klingt spannend, viel Erfolg dabei."
-            },
+            }
+        ],
+        "person1_2": [
             {
                 "role": "Leyla",
                 "text": "Haben sie eventuell ein paar Glühbirnen übrig, ihr Nachbar könnte welche gebrauchen."
@@ -347,6 +357,8 @@
     },
     "chapter8": {
         "intro": [
+        ],
+        "billboard": [
             {
                 "role": "Leyla",
                 "text": "Kein Wunder, das ich keine Sterne sehen konnte, "
@@ -358,7 +370,9 @@
             {
                 "role": "Leyla",
                 "text": "mal sehen, ob ich sie mit meinem Werkzeug ausschalten kann."
-            },
+            }
+        ],
+        "outro": [
             {
                 "role": "Leyla",
                 "text": "Das sieht schon besser aus, und da ist auch eine Bushaltestelle, vielleicht fährt noch ein Bus nach Hause."

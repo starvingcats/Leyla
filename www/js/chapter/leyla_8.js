@@ -106,8 +106,8 @@ function draw() {
     basic_movement();
     focus_gamechar();
 
-    if (keyWentDown('f')) {
-        if ((gamechar_sp.overlap(lamp1_sp)) && (!lamp_1_check) && (cur_dialogue_step > 1)) {
+    if (keyWentDown('f') || keyWentDown(40)) {
+        if ((gamechar_sp.overlap(lamp1_sp)) && (!lamp_1_check) && (cur_dialogue_step > 2)) {
             lamp_1_check = true;
             lamp1_sp.changeImage('off');
             billboard1_sp.changeImage('off');
@@ -126,13 +126,19 @@ function draw() {
         };
     }
 
+    if ((gamechar_sp.position.x > SCENE_W - 300) && (cur_dialogue != 'billboard') && (!lamp_1_check)) {
+        switch_dialogue('billboard');
+    }
+
+
     if ((lamp_2_check) && (lamp_3_check)) {
         billboard2_sp.changeImage('off');
     }
 
-    if ((!bus_sp.visible) && (lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) &&(gamechar_sp.position.x > SCENE_RBOUND - 200)) {
+    if ((!bus_sp.visible) && (lamp_1_check) && (lamp_2_check) && (lamp_3_check) && (lamp_4_check) && (gamechar_sp.position.x > SCENE_RBOUND - 1000)) {
+        switch_dialogue('outro');
         bus_sp.visible = true;
-        bus_sp.velocity.x = -5;
+        bus_sp.velocity.x = -10;
         wait(3 * 1000).then(function() {
             bus_sp.velocity.x = 0;
             transition('chapter9.html');

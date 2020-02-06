@@ -61,7 +61,7 @@ function draw() {
     apply_gravity();
     basic_movement();
     focus_gamechar();
-    if (keyWentDown('f')) {
+    if (keyWentDown('f') || keyWentDown(40)) {
         if ((telescope_off_check)) {
             telescope_off_check = false;
             return;

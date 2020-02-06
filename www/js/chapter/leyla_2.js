@@ -35,7 +35,7 @@ function draw() {
 
     focus_gamechar();
 
-    if (keyWentDown('f')) {
+    if (keyWentDown('f') || keyWentDown(40)) {
         cur_dialogue_step += 1;
     }
 

@@ -3,6 +3,7 @@ var background_img;
 var person1_sp;
 var person1_img;
 var person1_check = false;
+var person1_2_check = false;
 
 var person2_sp;
 var person2_img;
@@ -53,17 +54,22 @@ function draw() {
     basic_movement();
     focus_gamechar();
 
-    if (keyWentDown('f')) {
-        if ((gamechar_sp.overlap(person2_sp)) && (!person2_check) && (cur_dialogue_step > 1)) {
+    if (keyWentDown('f') || keyWentDown(40)) {
+        if ((gamechar_sp.overlap(person2_sp)) && (person1_check) && (!person2_check) && (cur_dialogue_step > 1)) {
             person2_check = true;
             switch_dialogue('person2');
-        } else if ((gamechar_sp.overlap(person1_sp)) && (!person1_check) && (person2_check) && (cur_dialogue_step > 1)) {
+        } else if ((gamechar_sp.overlap(person1_sp)) && (!person1_check) && (!person2_check)) {
             person1_check = true;
             switch_dialogue('person1');
-        } else if ((gamechar_sp.overlap(house_sp)) && (person1_check) && (person2_check) && (cur_dialogue_step > 1) && (cur_dialogue != 'outro')) {
+        } else if ((gamechar_sp.overlap(person1_sp)) && (person1_check) && (person2_check) && (!person1_2_check) && (cur_dialogue_step > 1)) {
+            person1_2_check = true;
+            switch_dialogue('person1_2');
+        } else if ((gamechar_sp.overlap(house_sp)) && (person1_check) && (person2_check) && (person1_2_check) && (cur_dialogue_step > 1) && (cur_dialogue != 'outro')) {
             house_check = true;
-            house_sp.changeImage('warm');
             switch_dialogue('outro');
+            wait(4 * 1000).then(function() {
+                house_sp.changeImage('warm');
+            });
         } else {
             cur_dialogue_step += 1;
         };
