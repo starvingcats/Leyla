@@ -3,61 +3,74 @@
         "intro": [
             {
                 "role": "Mutter",
-                "text": "Wir fahren bald los, bist du bereit?"
+                "text": "Wir fahren bald los, bist du bereit?",
+                "audio": "M1"
             },
             {
                 "role": "Leyla",
-                "text": "Ja, ich möchte nur nochmal kurz zu Opa und die Leylasterne sehen!"
+                "text": "Ja, ich möchte nur nochmal kurz zu Opa und die Leylasterne sehen!",
+                "audio": "L1"
             },
             {
                 "role": "Mutter",
-                "text": "Ok, aber beeil dich!"
+                "text": "Ok, aber beeil dich!",
+                "audio": "M2"
             },
             {
                 "role": "Leyla",
-                "text": "Ok, bis gleich!"
+                "text": "Ok, bis gleich!",
+                "audio": "L2"
             }
         ],
         "grandpa": [
             {
                 "role": "Opa",
-                "text": "Da bist du ja Leyla, ich habe schon auf dich gewartet."
+                "text": "Da bist du ja Leyla, ich habe schon auf dich gewartet.",
+                "audio": "O1"
             },
             {
                 "role": "Leyla",
-                "text": "Ich habe mich extra mit dem Packen beeilt,"
+                "text": "Ich habe mich extra mit dem Packen beeilt,",
+                "audio": "L3"
             },
             {
                 "role": "Leyla",
-                "text": "damit wir noch einmal die Sterne anschauen können."
+                "text": "damit wir noch einmal die Sterne anschauen können.",
+                "audio": "L4"
             },
             {
                 "role": "Opa",
-                "text": "Ich habe das Teleskop schon auf deine Sterne ausgerichtet, du kannst sie dir direkt ansehen."
+                "text": "Ich habe das Teleskop schon auf deine Sterne ausgerichtet, du kannst sie dir direkt ansehen.",
+                "audio": "O2"
             }
         ],
         "byegrandpa": [
             {
                 "role": "Mutter",
-                "text": "Leyla wir müssen los, kommst du?"
+                "text": "Leyla wir müssen los, kommst du?",
+                "audio": "M3"
             },
             {
                 "role": "Leyla",
-                "text": "Ja, sofort. Danke Opa und bis bald"
+                "text": "Ja, sofort. Danke Opa und bis bald",
+                "audio": "L5"
             },
             {
                 "role": "Opa",
-                "text": "Bis bald kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier."
+                "text": "Bis bald kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier.",
+                "audio": "O3"
             }
         ],
         "outro": [
             {
                 "role": "Mutter",
-                "text": "Steig' ins Auto, dann geht es los."
+                "text": "Steig' ins Auto, dann geht es los.",
+                "audio": "M4"
             },
             {
                 "role": "Leyla",
-                "text": "Ok."
+                "text": "Ok.",
+                "audio": "L6"
             }
         ]
     },
@@ -65,21 +78,25 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "Ich bin schon ganz gespannt auf unser neues Haus"
+                "text": "Ich bin schon ganz gespannt auf unser neues Haus",
+                "audio": "L7"
             },
             {
                 "role": "Mutter",
-                "text": "Du wirst es mögen, wir haben dort mehr Platz und einen schönen Garten."
+                "text": "Du wirst es mögen, wir haben dort mehr Platz und einen schönen Garten.",
+                "audio": "M5"
             },
             {
                 "role": "Leyla",
-                "text": "Aber ich sehe immer weniger Sterne, je weiter wir fahren..."
+                "text": "Aber ich sehe immer weniger Sterne, je weiter wir fahren...",
+                "audio": "L8"
             }
         ],
         "city": [
             {
                 "role": "Leyla",
-                "text": "... jetzt sehe ich gar keine Sterne mehr!"
+                "text": "... jetzt sehe ich gar keine Sterne mehr!",
+                "audio": "L9"
             }
         ]
     },
@@ -87,33 +104,39 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "So, die letzten Kartons sind ausgepackt,..."
+                "text": "So, die letzten Kartons sind ausgepackt,...",
+                "audio": "L10"
             },
             {
                 "role": "Leyla",
-                "text": "...mal sehen ob ich auch hier ein paar Sterne sehen kann,..."
+                "text": "...mal sehen ob ich auch hier ein paar Sterne sehen kann,...",
+                "audio": "L11"
             },
             {
                 "role": "Leyla",
-                "text": "...,es ist ja schon ziemlich hell hier"
+                "text": "...,es ist ja schon ziemlich hell hier",
+                "audio": "L12"
             }
         ],
         "midclue": [
             {
                 "role": "Leyla",
-                "text": "Hmm, nichts zu sehen, ich sollte wohl das Licht in meinem Zimmer ausmachen."
+                "text": "Hmm, nichts zu sehen, ich sollte wohl das Licht in meinem Zimmer ausmachen.",
+                "audio": "L13"
             }
         ],
         "houseoff": [
             {
                 "role": "Leyla",
-                "text": "Mal sehen, ob es jetzt besser ist."
+                "text": "Mal sehen, ob es jetzt besser ist.",
+                "audio": "L14"
             }
         ],
         "outro": [
             {
                 "role": "Leyla",
-                "text": "Nur ein Stern...  ...ich muss wohl noch andere Lichter ausschalten."
+                "text": "Nur ein Stern...  ...ich muss wohl noch andere Lichter ausschalten.",
+                "audio": "L15"
             }
         ]
     },
