@@ -14,12 +14,21 @@ var wrench_sp;
 var wrench_img;
 var wrench_check = false;
 
-
 var dl1_done = false;
 var dl2_done = false;
 var dl3_done = false;
 var dw_done = false;
 var od_done = false;
+
+function preload() {
+    var u_date = Date.now();
+    dialogues_raw = loadJSON("json/dialogues.json?_u=" + u_date);
+    background_img = loadImage('img/lvl6_background.png');
+    wrench_img = loadImage('img/lvl6_wrench.png');
+    lamp_even_img = loadImage('img/lvl6_lamp_even.png');
+    lamp_high_img = loadImage('img/lvl6_lamp_high.png');
+    lamp_low_img = loadImage('img/lvl6_lamp_low.png');
+}
 
 function setup() {
 
@@ -28,18 +37,13 @@ function setup() {
 
     createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/lvl6_background.png');
     background_sp = createSprite(2900, 360);
     background_sp.addImage(background_img);
     SCENE_RBOUND = 5500;
 
-    wrench_img = loadImage('img/lvl6_wrench.png');
     wrench_sp = createSprite(4 * SCENE_W, SCENE_H - 50);
     wrench_sp.addImage(wrench_img);
 
-    lamp_even_img = loadImage('img/lvl6_lamp_even.png');
-    lamp_high_img = loadImage('img/lvl6_lamp_high.png');
-    lamp_low_img = loadImage('img/lvl6_lamp_low.png');
 
     lamp1_sp = createSprite(3 * SCENE_W / 4 + 100, SCENE_H - 150);
     lamp1_sp.addImage('even', lamp_even_img);
@@ -72,47 +76,47 @@ function draw() {
     focus_gamechar();
 
     if (keyWentDown('f') || keyWentDown(40)) {
-        if ((gamechar_sp.overlap(lamp1_sp)) && (wrench_check) && (cur_dialogue_step > 1)) {
-            lamp1_sp.changeImage('even');
-            lamp_1_check = true;
-        } else if ((gamechar_sp.overlap(lamp2_sp)) && (wrench_check) && (cur_dialogue_step > 1)) {
-            lamp2_sp.changeImage('even');
-            lamp_2_check = true;
-        } else if ((gamechar_sp.overlap(wrench_sp)) && (!wrench_check) && (cur_dialogue_step > 1)) {
-            wrench_check = true;
-            wrench_sp.visible = false;
-        } else {
-            cur_dialogue_step += 1;
-        };
+	if ((gamechar_sp.overlap(lamp1_sp)) && (wrench_check) && (cur_dialogue_step > 1)) {
+	    lamp1_sp.changeImage('even');
+	    lamp_1_check = true;
+	} else if ((gamechar_sp.overlap(lamp2_sp)) && (wrench_check) && (cur_dialogue_step > 1)) {
+	    lamp2_sp.changeImage('even');
+	    lamp_2_check = true;
+	} else if ((gamechar_sp.overlap(wrench_sp)) && (!wrench_check) && (cur_dialogue_step > 1)) {
+	    wrench_check = true;
+	    wrench_sp.visible = false;
+	} else {
+	    cur_dialogue_step += 1;
+	};
     }
 
     if ((gamechar_sp.position.x > SCENE_W - 200) && (!dl1_done) && (cur_dialogue != 'lamp1') && (!lamp_1_check) && (!lamp_2_check)) {
-        switch_dialogue('lamp1');
-        dl1_done = true;
+	switch_dialogue('lamp1');
+	dl1_done = true;
     }
 
     if ((gamechar_sp.position.x > 2 * SCENE_W) && (!dl2_done) && (cur_dialogue != 'lamp2') && (!lamp_1_check) && (!lamp_2_check)) {
-        switch_dialogue('lamp2');
-        dl2_done = true;
+	switch_dialogue('lamp2');
+	dl2_done = true;
     }
 
     if ((gamechar_sp.position.x > 3.2 * SCENE_W) && (!dl3_done) && (cur_dialogue != 'lamp3') && (!lamp_1_check) && (!lamp_2_check)) {
-        switch_dialogue('lamp3');
-        dl3_done = true;
+	switch_dialogue('lamp3');
+	dl3_done = true;
     }
 
     if ((gamechar_sp.position.x > 3.8 * SCENE_W) && (!dw_done) && (cur_dialogue != 'wrench') && (!lamp_1_check) && (!lamp_2_check)) {
-        switch_dialogue('wrench');
-        dw_done = true;
+	switch_dialogue('wrench');
+	dw_done = true;
     }
 
     if ((lamp_1_check) && (lamp_2_check) && (!od_done)) {
-        od_done = true;
-        switch_dialogue('outro');
+	od_done = true;
+	switch_dialogue('outro');
     }
 
     if ((lamp_1_check) && (lamp_2_check) && (gamechar_sp.position.x > SCENE_RBOUND)) {
-        transition('chapter7.html');
+	transition('chapter7.html');
     }
 
     check_scene_bounds();

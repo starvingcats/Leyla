@@ -30,6 +30,19 @@ var done_check = false;
 var kiosk_check = false;
 var cafe_check = false;
 
+function preload() {
+    var u_date = Date.now();
+    dialogues_raw = loadJSON("json/dialogues.json?_u=" + u_date);
+    background_img = loadImage('img/lvl5_background.png');
+    person_img = loadImage('img/lvl5_person.png');
+    kioskspot_1_on_img = loadImage('img/lvl5_kioskspot_1.png');
+    kioskspot_1_off_img = loadImage('img/lvl5_kioskspot_1_off.png');
+    kioskspot_2_on_img = loadImage('img/lvl5_kioskspot_2.png');
+    kioskspot_2_off_img = loadImage('img/lvl5_kioskspot_2_off.png');
+    cafespot_on_img = loadImage('img/lvl5_cafespot.png');
+    cafespot_off_img = loadImage('img/lvl5_cafespots_off.png');
+}
+
 function setup() {
 
     dialogues = dialogues_raw.chapter5;
@@ -37,30 +50,22 @@ function setup() {
 
     createCanvas(SCENE_W, SCENE_H);
 
-    background_img = loadImage('img/lvl5_background.png');
     background_sp = createSprite(1900, 360);
     background_sp.addImage(background_img);
     SCENE_RBOUND = 3700;
     JUMP = 22;
 
-    person_img = loadImage('img/lvl5_person.png');
     person_sp = createSprite(1300, SCENE_GROUND - 110);
     person_sp.addImage(person_img);
 
-    kioskspot_1_on_img = loadImage('img/lvl5_kioskspot_1.png');
-    kioskspot_1_off_img = loadImage('img/lvl5_kioskspot_1_off.png');
     kioskspot_1_sp = createSprite(1350, SCENE_GROUND - 400);
     kioskspot_1_sp.addImage('on', kioskspot_1_on_img);
     kioskspot_1_sp.addImage('off', kioskspot_1_off_img);
 
-    kioskspot_2_on_img = loadImage('img/lvl5_kioskspot_2.png');
-    kioskspot_2_off_img = loadImage('img/lvl5_kioskspot_2_off.png');
     kioskspot_2_sp = createSprite(1600, SCENE_GROUND - 400);
     kioskspot_2_sp.addImage('on', kioskspot_2_on_img);
     kioskspot_2_sp.addImage('off', kioskspot_2_off_img);
 
-    cafespot_on_img = loadImage('img/lvl5_cafespot.png');
-    cafespot_off_img = loadImage('img/lvl5_cafespots_off.png');
     cafespot_sp = createSprite(3000, SCENE_GROUND- 510);
     cafespot_sp.addImage('on', cafespot_on_img);
     cafespot_sp.addImage('off', cafespot_off_img);
@@ -82,42 +87,42 @@ function draw() {
     focus_gamechar();
 
     if (keyWentDown('f') || keyWentDown(40)) {
-        if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
-            switch_dialogue('person');
-            person_check = true;
-        } else if ((gamechar_sp.overlap(kioskspot_1_sp)) && (person_check) && (!kioskspot_1_check) && !(cur_text)) {
-            kioskspot_1_sp.changeImage('off');
-            kioskspot_1_check = true;
-        } else if ((gamechar_sp.overlap(kioskspot_2_sp)) && (person_check) && (!kioskspot_2_check) && !(cur_text)) {
-            kioskspot_2_sp.changeImage('off');
-            kioskspot_2_check = true;
-        } else if ((gamechar_sp.overlap(cafespot_sp)) && (!cafespot_check) && (person_check)) {
-            cafespot_sp.changeImage('off');
-            cafespot_check = true;
-        } else {
-            cur_dialogue_step += 1;
-        };
+	if ((gamechar_sp.overlap(person_sp)) && (!person_check)) {
+	    switch_dialogue('person');
+	    person_check = true;
+	} else if ((gamechar_sp.overlap(kioskspot_1_sp)) && (person_check) && (!kioskspot_1_check) && !(cur_text)) {
+	    kioskspot_1_sp.changeImage('off');
+	    kioskspot_1_check = true;
+	} else if ((gamechar_sp.overlap(kioskspot_2_sp)) && (person_check) && (!kioskspot_2_check) && !(cur_text)) {
+	    kioskspot_2_sp.changeImage('off');
+	    kioskspot_2_check = true;
+	} else if ((gamechar_sp.overlap(cafespot_sp)) && (!cafespot_check) && (person_check)) {
+	    cafespot_sp.changeImage('off');
+	    cafespot_check = true;
+	} else {
+	    cur_dialogue_step += 1;
+	};
 
     }
 
     if ( (kioskspot_1_check) && (kioskspot_2_check) && (person_check) && (!done_check) && (!kiosk_check)) {
-        switch_dialogue('personthx');
-        kiosk_check = true;
+	switch_dialogue('personthx');
+	kiosk_check = true;
     }
 
 
     if ( (kioskspot_1_check) && (kioskspot_2_check) && (cafespot_check) && (!done_check)) {
-        switch_dialogue('outro');
-        done_check = true;
+	switch_dialogue('outro');
+	done_check = true;
     }
 
     if ( (gamechar_sp.position.x > SCENE_RBOUND - 1000) && (kiosk_check) && (!cafe_check)) {
-        switch_dialogue('cafe');
-        cafe_check = true;
+	switch_dialogue('cafe');
+	cafe_check = true;
     }
 
     if ( (gamechar_sp.position.x > SCENE_RBOUND) && (done_check) ) {
-        transition('chapter6.html');
+	transition('chapter6.html');
     }
 
     check_scene_bounds();
