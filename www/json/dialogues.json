@@ -25,17 +25,17 @@
         "grandpa": [
             {
                 "role": "Opa",
-                "text": "Da bist du ja Leyla, ich habe schon auf dich gewartet.",
+                "text": "Da bist du ja, Leyla, ich habe schon auf dich gewartet.",
                 "audio": "O1"
             },
             {
                 "role": "Leyla",
-                "text": "Ich habe mich extra mit dem Packen beeilt,",
+                "text": "Ich habe mich extra mit dem Packen beeilt,...",
                 "audio": "L3"
             },
             {
                 "role": "Leyla",
-                "text": "damit wir noch einmal die Sterne anschauen können.",
+                "text": "...damit wir noch einmal die Sterne anschauen können.",
                 "audio": "L4"
             },
             {
@@ -47,17 +47,17 @@
         "byegrandpa": [
             {
                 "role": "Mutter",
-                "text": "Leyla wir müssen los, kommst du?",
+                "text": "Leyla, wir müssen los, kommst du?",
                 "audio": "M3"
             },
             {
                 "role": "Leyla",
-                "text": "Ja, sofort. Danke Opa und bis bald",
+                "text": "Ja, sofort. Danke, Opa und bis bald",
                 "audio": "L5"
             },
             {
                 "role": "Opa",
-                "text": "Bis bald kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier.",
+                "text": "Bis bald, meine Kleine, hoffentlich sind die Sterne in der Stadt genau so schön wie hier.",
                 "audio": "O3"
             }
         ],
@@ -95,7 +95,7 @@
         "city": [
             {
                 "role": "Leyla",
-                "text": "... jetzt sehe ich gar keine Sterne mehr!",
+                "text": "... Jetzt sehe ich gar keine Sterne mehr!",
                 "audio": "L9"
             }
         ]
@@ -104,17 +104,17 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "So, die letzten Kartons sind ausgepackt,...",
+                "text": "So, die letzten Kartons sind ausgepackt.",
                 "audio": "L10"
             },
             {
                 "role": "Leyla",
-                "text": "...mal sehen ob ich auch hier ein paar Sterne sehen kann,...",
+                "text": "Mal sehen, ob ich auch hier ein paar Sterne sehen kann.",
                 "audio": "L11"
             },
             {
                 "role": "Leyla",
-                "text": "...,es ist ja schon ziemlich hell hier",
+                "text": "Es ist ja ganz schön hell hier.",
                 "audio": "L12"
             }
         ],
@@ -135,7 +135,7 @@
         "outro": [
             {
                 "role": "Leyla",
-                "text": "Nur ein Stern...  ...ich muss wohl noch andere Lichter ausschalten.",
+                "text": "Nur ein Stern...  ...Ich muss wohl noch andere Lichter ausschalten.",
                 "audio": "L15"
             }
         ]
@@ -150,15 +150,15 @@
         "person": [
             {
                 "role": "Fußgänger",
-                "text": "Siehst du die Motten da oben, ist es nicht schön wie sie um die Lampe kreisen?"
+                "text": "Siehst du die Motten da oben, ist es nicht schön, wie sie um die Lampe kreisen?"
             },
             {
                 "role": "Leyla",
-                "text": "Ja, aber leider haben sie selbst nicht so viel Spaß dabei,..."
+                "text": "Ja, aber leider haben sie selbst nicht so viel Spaß dabei..."
             },
             {
                 "role": "Leyla",
-                "text": "...sie sind im Bann des Lichts gefangen und können nicht entkommen."
+                "text": "...Sie sind im Bann des Lichts gefangen und können nicht entkommen."
             },
             {
                 "role": "Fußgänger",
@@ -166,7 +166,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "Mein Opa hat mir beigebracht so etwas zu reparieren, ich brauche nur einen Schraubenzieher"
+                "text": "Mein Opa hat mir beigebracht, so etwas zu reparieren, ich brauche nur einen Schraubenzieher."
             },
             {
                 "role": "Fußgänger",
@@ -184,7 +184,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "Ich brauche einen Schraubenzieher um die Lampe da drüben zu reparieren."
+                "text": "Ich brauche einen Schraubenzieher, um die Lampe da drüben zu reparieren."
             },
             {
                 "role": "Hausmeister",
@@ -206,7 +206,7 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "Ein bisschen dunkler ist es schon geworden, aber ich glaube das reicht noch nicht."
+                "text": "Ein bisschen dunkler ist es schon geworden, aber ich glaube, das reicht noch nicht."
             }
         ],
         "person": [
@@ -216,11 +216,11 @@
             },
             {
                 "role": "Müde Frau",
-                "text": "Ja, aber leider leuchten diese Lampen die ganze Nacht in mein Zimmer und ich habe keine Rollläden."
+                "text": "Ja, leider leuchten diese Lampen die ganze Nacht in mein Zimmer und ich habe keine Rollläden."
             },
             {
                 "role": "Müde Frau",
-                "text": "Ich würde die Lampen ja ausmachen aber ich habe nicht das passende Werkzeug."
+                "text": "Ich würde die Lampen ja ausmachen, aber ich habe nicht das passende Werkzeug."
             },
             {
                 "role": "Leyla",
@@ -234,7 +234,7 @@
         "personthx": [
             {
                 "role": "Müde Frau",
-                "text": "Danke, ich glaube jetzt kann ich besser schlafen."
+                "text": "Danke, ich glaube, jetzt kann ich besser schlafen."
             },
             {
                 "role": "Leyla",
@@ -244,13 +244,13 @@
         "cafe": [
             {
                 "role": "Leyla",
-                "text": "Hmm,  diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?"
+                "text": "Hmm, diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?"
             }
         ],
         "outro": [
             {
                 "role": "Leyla",
-                "text": "Na also geht doch!"
+                "text": "Na also, geht doch!"
             }
         ]
     },
@@ -264,19 +264,19 @@
             },
             {
                 "role": "Leyla",
-                "text": "Schade, ich bräuchte einen Schraubenschlüssel um an die Schwenkmechanik zu gelangen."
+                "text": "Schade, ich bräuchte einen Schraubenschlüssel, um an die Schwenkmechanik zu gelangen."
             }
         ],
         "lamp2": [
             {
                 "role": "Leyla",
-                "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom schlafen ab."
+                "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom Schlafen ab."
             }
         ],
         "lamp3": [
             {
                 "role": "Leyla",
-                "text": "Diese Lampe beleuchtet nur den Weg und die Bank, wenigstens eine, die richtig eingestellt ist."
+                "text": "Diese Lampe beleuchtet nur den Weg und die Bank, das ist die einzige, die richtig eingestellt ist."
             }
         ],
         "wrench": [
@@ -300,7 +300,7 @@
             },
             {
                 "role": "Sternebeobachter",
-                "text": "Ich habe gerade einen Film über die Sterne gesehen und dachte mir, ich schaue mal..."
+                "text": "Ich habe gerade einen Film über die Sterne gesehen und dachte mir, ich schaue mal,..."
             },
             {
                 "role": "Sternebeobachter",
@@ -312,7 +312,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "Ich versuche gerade die Stadt dunkler zu machen, damit sie wieder sichtbar werden."
+                "text": "Ich versuche gerade, die Stadt dunkler zu machen, damit sie wieder sichtbar werden."
             },
             {
                 "role": "Sternebeobachter",
@@ -352,7 +352,7 @@
             },
             {
                 "role": "Leyla",
-                "text": "Vielleicht sollten sie mal wärmeres Licht probieren, blaues Licht kann beim müdewerden stören."
+                "text": "Vielleicht sollten sie mal wärmeres Licht probieren, blaues Licht kann beim müde Werden stören."
             },
             {
                 "role": "Herr Hausmann",
@@ -370,7 +370,7 @@
             },
             {
                 "role": "Herr Hausmann",
-                "text": "Danke, ich habe sie direkt eingebaut, ich werde auch schon ein bisschen Müde... gute Nacht."
+                "text": "Danke, ich habe sie direkt eingebaut, ich werde auch schon ein bisschen müde... Gute Nacht."
             },
             {
                 "role": "Leyla",
@@ -384,15 +384,15 @@
         "billboard": [
             {
                 "role": "Leyla",
-                "text": "Kein Wunder, das ich keine Sterne sehen konnte, "
+                "text": "Kein Wunder, dass ich keine Sterne sehen konnte."
             },
             {
                 "role": "Leyla",
-                "text": "diese Strahler hier beleuchten ja nicht nur die Werbung, sondern auch noch den ganzen Himmel,"
+                "text": "Diese Strahler hier beleuchten ja nicht nur die Werbung, sondern auch noch den ganzen Himmel."
             },
             {
                 "role": "Leyla",
-                "text": "mal sehen, ob ich sie mit meinem Werkzeug ausschalten kann."
+                "text": "Mal sehen, ob ich sie mit meinem Werkzeug ausschalten kann."
             }
         ],
         "outro": [
@@ -406,7 +406,7 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "So, jetzt sollte es dunkel genug sein, mal sehen, ob ich jetzt meine Sterne wieder sehen kann"
+                "text": "So, jetzt sollte es dunkel genug sein. Mal sehen, ob ich jetzt meine Sterne wieder sehen kann."
             }
         ],
         "outro": [
@@ -417,3 +417,4 @@
         ]
     }
 }
+
