@@ -158,6 +158,7 @@ function run_dialogue() {
         } else {
             text(display_text, SCENE_W/2, 50);
         }
+        speak(cur_text.audio);
 
     } else {
         block_move = false;
