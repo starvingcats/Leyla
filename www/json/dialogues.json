@@ -144,61 +144,74 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "Mal sehen, ob ich hier was tun kann."
+                "text": "Mal sehen, ob ich hier was tun kann.",
+                "audio": "L16"
             }
         ],
         "person": [
             {
                 "role": "Fußgänger",
-                "text": "Siehst du die Motten da oben, ist es nicht schön, wie sie um die Lampe kreisen?"
+                "text": "Siehst du die Motten da oben, ist es nicht schön, wie sie um die Lampe kreisen?",
+                "audio": "FG1"
             },
             {
                 "role": "Leyla",
-                "text": "Ja, aber leider haben sie selbst nicht so viel Spaß dabei..."
+                "text": "Ja, aber leider haben sie selbst nicht so viel Spaß dabei...",
+                "audio": "L17"
             },
             {
                 "role": "Leyla",
-                "text": "...Sie sind im Bann des Lichts gefangen und können nicht entkommen."
+                "text": "...Sie sind im Bann des Lichts gefangen und können nicht entkommen.",
+                "audio": "L18"
             },
             {
                 "role": "Fußgänger",
-                "text": "Eigentlich hat diese Lampe eine Zeitschaltuhr, aber die ist schon länger kaputt."
+                "text": "Eigentlich hat diese Lampe eine Zeitschaltuhr, aber die ist schon länger kaputt.",
+                "audio": "FG2"
             },
             {
                 "role": "Leyla",
-                "text": "Mein Opa hat mir beigebracht, so etwas zu reparieren, ich brauche nur einen Schraubenzieher."
+                "text": "Mein Opa hat mir beigebracht, so etwas zu reparieren, ich brauche nur einen Schraubenzieher.",
+                "audio": "L19"
             },
             {
                 "role": "Fußgänger",
-                "text": "Zwei Häuser weiter wohnt der Hausmeister der Straße, vielleicht kann er dir helfen."
+                "text": "Zwei Häuser weiter wohnt der Hausmeister der Straße, vielleicht kann er dir helfen.",
+                "audio": "FG3"
             }
         ],
         "janitor": [
             {
                 "role": "Leyla",
-                "text": "Hey, bist du der Hausmeister?"
+                "text": "Hey, bist du der Hausmeister?",
+                "audio": "L20"
             },
             {
                 "role": "Hausmeister",
-                "text": "Ja, der bin ich, kann ich dir helfen?"
+                "text": "Ja, der bin ich, kann ich dir helfen?",
+                "audio": "H1"
             },
             {
                 "role": "Leyla",
-                "text": "Ich brauche einen Schraubenzieher, um die Lampe da drüben zu reparieren."
+                "text": "Ich brauche einen Schraubenzieher, um die Lampe da drüben zu reparieren.",
+                "audio": "L21"
             },
             {
                 "role": "Hausmeister",
-                "text": "Hier, du kannst ihn behalten, falls du noch weitere Lampen findest, aber sei vorsichtig!"
+                "text": "Hier, du kannst ihn behalten, falls du noch weitere Lampen findest, aber sei vorsichtig!",
+                "audio": "H2"
             }
         ],
         "outro": [
             {
                 "role": "Leyla",
-                "text": "So, jetzt können die Motten weiterfliegen."
+                "text": "So, jetzt können die Motten weiterfliegen.",
+                "audio": "L22"
             },
             {
                 "role": "Fußgänger",
-                "text": "Toll, danke!"
+                "text": "Toll, danke!",
+                "audio": "FG4"
             }
         ]
     },
@@ -417,4 +430,3 @@
         ]
     }
 }
-
