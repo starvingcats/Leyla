@@ -31,6 +31,13 @@ var audioFiles = [
   "L13",
   "L14",
   "L15",
+  "L16",
+  "L17",
+  "L18",
+  "L19",
+  "L20",
+  "L21",
+  "L22",
   "M1",
   "M2",
   "M3",
@@ -38,7 +45,12 @@ var audioFiles = [
   "M5",
   "O1",
   "O2",
-  "O3",];
+  "O3",
+  "FG1",
+  "FG2",
+  "FG3",
+  "FG4",
+];
 
 var dialogueLines = {};
 
