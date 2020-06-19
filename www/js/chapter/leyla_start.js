@@ -9,12 +9,12 @@ function setup() {
 
     button = createButton('&#128362;');
     button.position(SCENE_W / 2, SCENE_H - 100);
-    button.mousePressed(dummy);
+    button.mousePressed(intro);
     button.center('horizontal');
 }
 
-function dummy() {
-    console && console.log("User Interaction done, audio should work now");
+function intro() {
+    speak("Intro");
 }
 
 function draw() {

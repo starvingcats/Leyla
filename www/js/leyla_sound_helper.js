@@ -55,7 +55,8 @@ var audioFiles = [
   "S2",
   "S3",
   "S4",
-  "S5"
+  "S5",
+  "Intro"
 ];
 
 var dialogueLines = {};
