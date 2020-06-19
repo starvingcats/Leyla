@@ -312,12 +312,14 @@
                 "text": "Hallo, was machen sie denn hier?"
             },
             {
-                "role": "Sternebeobachter",
-                "text": "Ich habe gerade einen Film über die Sterne gesehen und dachte mir, ich schaue mal,..."
+                "role": "Sternenbeobachter",
+                "text": "Ich habe gerade einen Film über die Sterne gesehen und dachte mir, ich schaue mal,...",
+                "audio": "S0"
             },
             {
-                "role": "Sternebeobachter",
-                "text": "...ob ich sie auch in echt sehen kann, aber leider sieht man nicht so viele wie im Film."
+                "role": "Sternenbeobachter",
+                "text": "...ob ich sie auch in echt sehen kann, aber leider sieht man nicht so viele wie im Film.",
+                "audio": "S1"
             },
             {
                 "role": "Leyla",
@@ -328,8 +330,9 @@
                 "text": "Ich versuche gerade, die Stadt dunkler zu machen, damit sie wieder sichtbar werden."
             },
             {
-                "role": "Sternebeobachter",
-                "text": "Das klingt spannend, viel Erfolg dabei."
+                "role": "Sternenbeobachter",
+                "text": "Das klingt spannend, viel Erfolg dabei.",
+                "audio": "S2"
             }
         ],
         "person1_2": [
@@ -339,15 +342,18 @@
             },
             {
                 "role": "Sternenbeobachter",
-                "text": "Da hast du ja Glück, ich habe gerade gestern noch neue geholt."
+                "text": "Da hast du ja Glück, ich habe gerade gestern noch neue geholt.",
+                "audio": "S3"
             },
             {
                 "role": "Sternenbeobachter",
-                "text": "Leider musste ich lange suchen, weil der Baumarkt fast nur grellblaue Lampen hat"
+                "text": "Leider musste ich lange suchen, weil der Baumarkt fast nur grellblaue Lampen hat",
+                "audio": "S4"
             },
             {
                 "role": "Sternenbeobachter",
-                "text": "Hier hast du jedenfalls die Glühbirnen. Grüß Herrn Hausmann von mir"
+                "text": "Hier hast du jedenfalls die Glühbirnen. Grüß Herrn Hausmann von mir",
+                "audio": "S5"
             },
             {
                 "role": "Leyla",
