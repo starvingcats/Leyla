@@ -10,6 +10,7 @@ function setup() {
     button = createButton('&#128362;');
     button.position(SCENE_W / 2, SCENE_H - 100);
     button.mousePressed(dummy);
+    button.center('horizontal');
 }
 
 function dummy() {
