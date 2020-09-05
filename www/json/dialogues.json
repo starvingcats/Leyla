@@ -219,13 +219,15 @@
         "intro": [
             {
                 "role": "Leyla",
-                "text": "Ein bisschen dunkler ist es schon geworden, aber ich glaube, das reicht noch nicht."
+                "text": "Ein bisschen dunkler ist es schon geworden, aber ich glaube, das reicht noch nicht.",
+                "audio": "L33"
             }
         ],
         "person": [
             {
                 "role": "Leyla",
-                "text": "Guten Abend, geht es ihnen gut? Sie sehen so müde aus."
+                "text": "Guten Abend, geht es ihnen gut? Sie sehen so müde aus.",
+                "audio": "L24"
             },
             {
                 "role": "Müde Frau",
@@ -237,7 +239,8 @@
             },
             {
                 "role": "Leyla",
-                "text": "Ich habe eben einen Schraubenzieher geschenkt bekommen, vielleicht kann ich ja helfen."
+                "text": "Ich habe eben einen Schraubenzieher geschenkt bekommen, vielleicht kann ich ja helfen.",
+                "audio": "L25"
             },
             {
                 "role": "Müde Frau",
@@ -251,19 +254,22 @@
             },
             {
                 "role": "Leyla",
-                "text": "Gern geschehen, gute Nacht!"
+                "text": "Gern geschehen, gute Nacht!",
+                "audio": "L26"
             }
         ],
         "cafe": [
             {
                 "role": "Leyla",
-                "text": "Hmm, diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?"
+                "text": "Hmm, diese Lampen sind direkt vor dem Fenster montiert, ob ich da wohl dran komme?",
+                "audio": "L27"
             }
         ],
         "outro": [
             {
                 "role": "Leyla",
-                "text": "Na also, geht doch!"
+                "text": "Na also, geht doch!",
+                "audio": "L28"
             }
         ]
     },
@@ -273,35 +279,41 @@
         "lamp1": [
             {
                 "role": "Leyla",
-                "text": "Hmmm, diese Lampe leuchtet ja mehr in den Himmel als auf den Boden."
+                "text": "Hmmm, diese Lampe leuchtet ja mehr in den Himmel als auf den Boden.",
+                "audio": "L29"
             },
             {
                 "role": "Leyla",
-                "text": "Schade, ich bräuchte einen Schraubenschlüssel, um an die Schwenkmechanik zu gelangen."
+                "text": "Schade, ich bräuchte einen Schraubenschlüssel, um an die Schwenkmechanik zu gelangen.",
+                "audio": "L30"
             }
         ],
         "lamp2": [
             {
                 "role": "Leyla",
-                "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom Schlafen ab."
+                "text": "Diese Lampe leuchtet fast nur in den Busch und hält die Tiere vom Schlafen ab.",
+                "audio": "L31"
             }
         ],
         "lamp3": [
             {
                 "role": "Leyla",
-                "text": "Diese Lampe beleuchtet nur den Weg und die Bank, das ist die einzige, die richtig eingestellt ist."
+                "text": "Diese Lampe beleuchtet nur den Weg und die Bank, das ist die einzige, die richtig eingestellt ist.",
+                "audio": "L32"
             }
         ],
         "wrench": [
             {
                 "role": "Leyla",
-                "text": "Juhu, ein Schraubenschlüssel, hoffen wir mal, dass er passt"
+                "text": "Juhu, ein Schraubenschlüssel, hoffen wir mal, dass er passt",
+                "audio": "L33"
             }
         ],
         "outro": [
             {
                 "role": "Leyla",
-                "text": "Jetzt sieht es hier doch schon viel besser aus, weiter gehts!"
+                "text": "Jetzt sieht es hier doch schon viel besser aus, weiter gehts!",
+                "audio": "L34"
             }
         ]
     },
